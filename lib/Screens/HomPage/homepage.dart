@@ -64,10 +64,11 @@ class _HomePageState extends State<HomePage> {
                             margin: const EdgeInsets.only(
                                 top: 10, right: 12, bottom: 4),
                             decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage(popularImage[index]),
-                                    fit: BoxFit.cover),
-                                borderRadius: BorderRadius.circular(12),),
+                              image: DecorationImage(
+                                  image: AssetImage(popularImage[index]),
+                                  fit: BoxFit.cover),
+                              borderRadius: BorderRadius.circular(12),
+                            ),
                           ),
                           Text(
                             popularText[index],
@@ -186,7 +187,7 @@ class _HomePageState extends State<HomePage> {
                   child: Row(
                     children: List.generate(
                       feelingsImage.length,
-                          (index) => Column(
+                      (index) => Column(
                         children: [
                           Container(
                             height: height * 0.13,
@@ -220,7 +221,7 @@ class _HomePageState extends State<HomePage> {
                   child: Row(
                     children: List.generate(
                       familyImage.length,
-                          (index) => Column(
+                      (index) => Column(
                         children: [
                           Container(
                             height: height * 0.13,
@@ -254,7 +255,7 @@ class _HomePageState extends State<HomePage> {
                   child: Row(
                     children: List.generate(
                       momentsImage.length,
-                          (index) => Column(
+                      (index) => Column(
                         children: [
                           Container(
                             height: height * 0.13,
@@ -288,7 +289,7 @@ class _HomePageState extends State<HomePage> {
                   child: Row(
                     children: List.generate(
                       otherImage.length,
-                          (index) => Column(
+                      (index) => Column(
                         children: [
                           Container(
                             height: height * 0.13,
