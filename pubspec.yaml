@@ -35,6 +35,10 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
+  image_gallery_saver: ^2.0.3
+  path_provider: ^2.1.3
+  share_extend: ^2.0.0
+  flutter_colorpicker: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -99,6 +103,26 @@ flutter:
     - assets/images/HomePage_Images/Other/dreams.jpg
     - assets/images/HomePage_Images/Other/env.jpg
     - assets/images/HomePage_Images/Other/god.jpg
+    - assets/images/LoveImages/l1.jpg
+    - assets/images/LoveImages/l2.jpg
+    - assets/images/LoveImages/l3.jpg
+    - assets/images/LoveImages/l4.jpg
+    - assets/images/LoveImages/l5.jpg
+    - assets/images/LoveImages/l6.jpg
+    - assets/images/LoveImages/l7.jpg
+    - assets/images/LoveImages/l8.jpg
+    - assets/images/LoveImages/l9.jpg
+    - assets/images/LoveImages/l10.jpg
+    - assets/images/CategoryWise_Images/LoveImages/l1.jpg
+    - assets/images/CategoryWise_Images/LoveImages/l2.jpg
+    - assets/images/CategoryWise_Images/LoveImages/l3.jpg
+    - assets/images/CategoryWise_Images/LoveImages/l4.jpg
+    - assets/images/CategoryWise_Images/LoveImages/l5.jpg
+    - assets/images/CategoryWise_Images/LoveImages/l6.jpg
+    - assets/images/CategoryWise_Images/LoveImages/l7.jpg
+    - assets/images/CategoryWise_Images/LoveImages/l8.jpg
+    - assets/images/CategoryWise_Images/LoveImages/l9.jpg
+    - assets/images/CategoryWise_Images/LoveImages/l10.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -134,6 +158,46 @@ flutter:
     - family: gc_m
       fonts:
         - asset: assets/fonts/gc_m.ttf
+
+    - family: garamond
+      fonts:
+        - asset: assets/fonts/EditPageFont/garamond.ttf
+
+    - family: mali
+      fonts:
+        - asset: assets/fonts/EditPageFont/mali.ttf
+
+    - family: seasen
+      fonts:
+        - asset: assets/fonts/EditPageFont/seasen.ttf
+
+    - family: klee
+      fonts:
+        - asset: assets/fonts/EditPageFont/klee.ttf
+
+    - family: kurale
+      fonts:
+        - asset: assets/fonts/EditPageFont/kurale.ttf
+
+    - family: spin
+      fonts:
+        - asset: assets/fonts/EditPageFont/spin.ttf
+
+    - family: arbut
+      fonts:
+        - asset: assets/fonts/EditPageFont/arbut.ttf
+
+    - family: b612
+      fonts:
+        - asset: assets/fonts/EditPageFont/b612.ttf
+
+    - family: petit
+      fonts:
+        - asset: assets/fonts/EditPageFont/petit.ttf
+
+    - family: cormorant
+      fonts:
+        - asset: assets/fonts/EditPageFont/cormorant.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

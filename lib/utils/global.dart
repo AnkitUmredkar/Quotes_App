@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 Color bgColor = const Color(0xff101012);
 Color buttonColor = const Color(0xff8A98B7);
+
 // todo------------------------------> Popular
 List popularImage = [
   'assets/images/HomePage_Images/love.jpg',
@@ -110,16 +111,34 @@ List otherImage = [
 List otherText = [
   'God  ',
   'Age  ',
-  'change  ',
-  'communication  ',
-  'environment  ',
-  'dreams  ',
+  'Change  ',
+  'Communication  ',
+  'Environment  ',
+  'Dreams  ',
 ];
+
+List allPopularPageImages = [
+   [
+     'assets/images/CategoryWise_Images/LoveImages/l1.jpg',
+     'assets/images/CategoryWise_Images/LoveImages/l2.jpg',
+     'assets/images/CategoryWise_Images/LoveImages/l3.jpg',
+     'assets/images/CategoryWise_Images/LoveImages/l4.jpg',
+     'assets/images/CategoryWise_Images/LoveImages/l5.jpg',
+     'assets/images/CategoryWise_Images/LoveImages/l6.jpg',
+     'assets/images/CategoryWise_Images/LoveImages/l7.jpg',
+     'assets/images/CategoryWise_Images/LoveImages/l8.jpg',
+     'assets/images/CategoryWise_Images/LoveImages/l9.jpg',
+     'assets/images/CategoryWise_Images/LoveImages/l10.jpg',
+  ],
+
+];
+
+List showImages = [];
 
 Text headingOfHomepage(double width, String data) {
   return Text(
     data,
     style: TextStyle(
-        color: Colors.white, fontFamily: 'gc_m', fontSize: width * 0.053),
+        color: Colors.white, fontFamily: 'gc_m', fontSize: width * 0.0545),
   );
 }
