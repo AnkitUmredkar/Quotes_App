@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
         body: Container(
-          padding: const EdgeInsets.fromLTRB(20, 18, 20, 20),
+          padding: const EdgeInsets.all(17.5),
           decoration: const BoxDecoration(
               gradient: LinearGradient(colors: [
                 Color(0xff1A1A36),
@@ -91,6 +91,7 @@ class _HomePageState extends State<HomePage> {
                           popularImage.length,
                               (index) => GestureDetector(
                             onTap: () {
+                              showImages = [];
                               showImages = allPopularPageImages[index];
                               title = popularText[index];
                               showQuotesList = [];

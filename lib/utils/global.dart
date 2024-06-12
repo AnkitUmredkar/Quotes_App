@@ -130,7 +130,30 @@ List allPopularPageImages = [
      'assets/images/CategoryWise_Images/LoveImages/l9.jpg',
      'assets/images/CategoryWise_Images/LoveImages/l10.jpg',
   ],
-
+  [
+    'assets/images/CategoryWise_Images/LifeImages/l1.jpg',
+    'assets/images/CategoryWise_Images/LifeImages/l2.jpg',
+    'assets/images/CategoryWise_Images/LifeImages/l3.jpg',
+    'assets/images/CategoryWise_Images/LifeImages/l4.jpg',
+    'assets/images/CategoryWise_Images/LifeImages/l5.jpg',
+    'assets/images/CategoryWise_Images/LifeImages/l6.jpg',
+    'assets/images/CategoryWise_Images/LifeImages/l7.jpg',
+    'assets/images/CategoryWise_Images/LifeImages/l8.jpg',
+    'assets/images/CategoryWise_Images/LifeImages/l9.jpg',
+    'assets/images/CategoryWise_Images/LifeImages/l10.jpg',
+  ],
+  [
+    'assets/images/CategoryWise_Images/WorkImages/l1.jpg',
+    'assets/images/CategoryWise_Images/WorkImages/l2.jpg',
+    'assets/images/CategoryWise_Images/WorkImages/l3.jpg',
+    'assets/images/CategoryWise_Images/WorkImages/l4.jpg',
+    'assets/images/CategoryWise_Images/WorkImages/l5.jpg',
+    'assets/images/CategoryWise_Images/WorkImages/l6.jpg',
+    'assets/images/CategoryWise_Images/WorkImages/l7.jpg',
+    'assets/images/CategoryWise_Images/WorkImages/l8.jpg',
+    'assets/images/CategoryWise_Images/WorkImages/l9.jpg',
+    'assets/images/CategoryWise_Images/WorkImages/l10.jpg',
+  ],
 ];
 
 List showImages = [];
