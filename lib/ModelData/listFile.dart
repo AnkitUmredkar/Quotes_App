@@ -165,55 +165,55 @@ List allQuotesList = [
     'author': 'Frank Ocean',
   },
   {
-    'category': 'Mom  ',
+    'category': 'Mother  ',
     'quotes': 'A mother’s love is more beautiful than any fresh flower.',
     'author': 'Debasish Mridha',
   },
   {
-    'category': 'Mom  ',
+    'category': 'Mother  ',
     'quotes': 'Motherhood: All love begins and ends there.',
     'author': 'Robert Browning',
   },
   {
-    'category': 'Mom  ',
+    'category': 'Mother  ',
     'quotes': 'Life doesn’t come with a manual, it comes with a mother.',
     'author': 'Unknown',
   },
   {
-    'category': 'Mom  ',
+    'category': 'Mother  ',
     'quotes': 'A mother’s arms are more comforting than anyone else’s.',
     'author': 'Princess Diana',
   },
   {
-    'category': 'Mom  ',
+    'category': 'Mother  ',
     'quotes':
         'The influence of a mother in the lives of her children is beyond calculation.',
     'author': 'James E. Faust',
   },
   {
-    'category': 'Mom  ',
+    'category': 'Mother  ',
     'quotes':
         'A mother is she who can take the place of all others but whose place no one else can take.',
     'author': 'Cardinal Mermillod',
   },
   {
-    'category': 'Mom  ',
+    'category': 'Mother  ',
     'quotes': 'A mother’s hug lasts long after she lets go.',
     'author': 'Unknown',
   },
   {
-    'category': 'Mom  ',
+    'category': 'Mother  ',
     'quotes':
         'To the world, you are a mother, but to your family, you are the world.',
     'author': 'Unknown',
   },
   {
-    'category': 'Mom  ',
+    'category': 'Mother  ',
     'quotes': 'A mother is the one who fills your heart in the first place.',
     'author': 'Amy Tan',
   },
   {
-    'category': 'Mom  ',
+    'category': 'Mother  ',
     'quotes':
         'Mothers hold their children’s hands for a short while, but their hearts forever.',
     'author': 'Unknown',
@@ -278,57 +278,57 @@ List allQuotesList = [
     'author': 'John Evelyn',
   },
   {
-    'category': 'Motivation  ',
+    'category': 'Motivate  ',
     'quotes': 'The way to get started is to quit talking and begin doing.',
     'author': 'Walt Disney',
   },
   {
-    'category': 'Motivation  ',
+    'category': 'Motivate  ',
     'quotes':
         'The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.',
     'author': 'Winston Churchill',
   },
   {
-    'category': 'Motivation  ',
+    'category': 'Motivate  ',
     'quotes': 'Don’t let yesterday take up too much of today.',
     'author': 'Will Rogers',
   },
   {
-    'category': 'Motivation  ',
+    'category': 'Motivate  ',
     'quotes':
         'You learn more from failure than from success. Don’t let it stop you. Failure builds character.',
     'author': 'Unknown',
   },
   {
-    'category': 'Motivation  ',
+    'category': 'Motivate  ',
     'quotes': 'It’s not whether you get knocked down, it’s whether you get up.',
     'author': 'Vince Lombardi',
   },
   {
-    'category': 'Motivation  ',
+    'category': 'Motivate  ',
     'quotes':
         'People who are crazy enough to think they can change the world, are the ones who do.',
     'author': 'Rob Siltanen',
   },
   {
-    'category': 'Motivation  ',
+    'category': 'Motivate  ',
     'quotes': 'We may encounter many defeats but we must not be defeated.',
     'author': 'Maya Angelou',
   },
   {
-    'category': 'Motivation  ',
+    'category': 'Motivate  ',
     'quotes':
         'The only limit to our realization of tomorrow is our doubts of today.',
     'author': 'Franklin D. Roosevelt',
   },
   {
-    'category': 'Motivation  ',
+    'category': 'Motivate  ',
     'quotes':
         'The man who has confidence in himself gains the confidence of others.',
     'author': 'Hasidic Proverb',
   },
   {
-    'category': 'Motivation  ',
+    'category': 'Motivate  ',
     'quotes':
         'The only way to achieve the impossible is to believe it is possible.',
     'author': 'Charles Kingsleigh',

@@ -143,6 +143,16 @@ flutter:
     - assets/images/CategoryWise_Images/WorkImages/l8.jpg
     - assets/images/CategoryWise_Images/WorkImages/l9.jpg
     - assets/images/CategoryWise_Images/WorkImages/l10.jpg
+    - assets/images/CategoryWise_Images/MomImages/l1.jpg
+    - assets/images/CategoryWise_Images/MomImages/l2.jpg
+    - assets/images/CategoryWise_Images/MomImages/l3.jpg
+    - assets/images/CategoryWise_Images/MomImages/l4.jpg
+    - assets/images/CategoryWise_Images/MomImages/l5.jpg
+    - assets/images/CategoryWise_Images/MomImages/l6.jpg
+    - assets/images/CategoryWise_Images/MomImages/l7.jpg
+    - assets/images/CategoryWise_Images/MomImages/l8.jpg
+    - assets/images/CategoryWise_Images/MomImages/l9.jpg
+    - assets/images/CategoryWise_Images/MomImages/l10.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

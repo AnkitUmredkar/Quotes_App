@@ -91,7 +91,7 @@ class _HomePageState extends State<HomePage> {
                           popularImage.length,
                               (index) => GestureDetector(
                             onTap: () {
-                              showImages = [];
+                              showImages= [];
                               showImages = allPopularPageImages[index];
                               title = popularText[index];
                               showQuotesList = [];
@@ -152,6 +152,8 @@ class _HomePageState extends State<HomePage> {
                           motivationImage.length,
                               (index) => GestureDetector(
                             onTap: () {
+                              showImages = [];
+                              showImages = allMotivationPageImages[index];
                               title = motivationText[index];
                               showQuotesList = [];
                               keyList = [];
@@ -342,9 +344,12 @@ class _HomePageState extends State<HomePage> {
                       scrollDirection: Axis.horizontal,
                       child: Row(
                         children: List.generate(
+
                           feelingsImage.length,
                               (index) => GestureDetector(
                             onTap: () {
+                              showImages = [];
+                              showImages = allFeelingsPageImages[index];
                               title = motivationText[index];
                               showQuotesList = [];
                               keyList = [];
@@ -404,6 +409,8 @@ class _HomePageState extends State<HomePage> {
                           familyImage.length,
                               (index) => GestureDetector(
                             onTap: () {
+                              showImages = [];
+                              showImages = allFamilyPageImages[index];
                               title = familyText[index];
                               showQuotesList = [];
                               keyList = [];
@@ -462,6 +469,8 @@ class _HomePageState extends State<HomePage> {
                           momentsImage.length,
                               (index) => GestureDetector(
                             onTap: () {
+                              showImages = [];
+                              showImages = allMomentsPageImages[index];
                               title = momentsText[index];
                               showQuotesList = [];
                               keyList = [];
@@ -520,6 +529,8 @@ class _HomePageState extends State<HomePage> {
                           otherImage.length,
                               (index) => GestureDetector(
                             onTap: () {
+                              showImages = [];
+                              showImages = allOtherPageImages[index];
                               title = otherText[index];
                               showQuotesList = [];
                               keyList = [];
