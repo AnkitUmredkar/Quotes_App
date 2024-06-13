@@ -344,13 +344,12 @@ class _HomePageState extends State<HomePage> {
                       scrollDirection: Axis.horizontal,
                       child: Row(
                         children: List.generate(
-
                           feelingsImage.length,
                               (index) => GestureDetector(
                             onTap: () {
                               showImages = [];
                               showImages = allFeelingsPageImages[index];
-                              title = motivationText[index];
+                              title = feelingsText[index];
                               showQuotesList = [];
                               keyList = [];
                               for (int i = 0;

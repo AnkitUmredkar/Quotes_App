@@ -92,12 +92,13 @@ class _ShowQuotesState extends State<ShowQuotes> {
                                       child: Container(
                                           height: height * 0.35,
                                           padding: const EdgeInsets.fromLTRB(
-                                              20, 20, 20, 28),
+                                              20, 20, 20, 20),
                                           decoration: BoxDecoration(
-                                            image: DecorationImage(
-                                              fit: BoxFit.cover,
-                                              image: AssetImage(showImages[index]),
-                                            ),
+                                              image: DecorationImage(
+                                                fit: BoxFit.cover,
+                                                image: AssetImage(
+                                                    showImages[index]),
+                                              ),
                                               borderRadius:
                                                   BorderRadius.circular(8),
                                               color: Colors.white12),
@@ -107,28 +108,63 @@ class _ShowQuotesState extends State<ShowQuotes> {
                                               textAlign: TextAlign.center,
                                               showQuotesList[index]['quotes'],
                                               style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontFamily: 'gc_m',
-                                                  fontSize: width * 0.051),
+                                                color: Colors.white,
+                                                fontFamily: 'gc_m',
+                                                fontSize: width * 0.051,
+                                                shadows: const [
+                                                  Shadow(
+                                                    offset: Offset(-2, -2),
+                                                    blurRadius: 16.5,
+                                                    color: Colors.black,
+                                                  ),
+                                                  Shadow(
+                                                    offset: Offset(3, 3),
+                                                    blurRadius: 16.5,
+                                                    color: Colors
+                                                        .black,
+                                                  ),
+                                                ],
+                                              ),
                                             ),
                                           )),
                                     ),
-                                    // Container(
-                                    //     height: height * 0.35,
-                                    //     padding: const EdgeInsets.fromLTRB(20, 20, 20, 28),
-                                    //     decoration: BoxDecoration(
-                                    //         borderRadius: BorderRadius.circular(8), color: Colors.white12),
-                                    //     child: Align(
-                                    //       alignment: Alignment.bottomCenter,
-                                    //       child: Text(
-                                    //         textAlign: TextAlign.center,
-                                    //         showQuotesList[index]['quotes'],
-                                    //         style: TextStyle(
-                                    //             color: Colors.white,
-                                    //             fontFamily: 'gc_m',
-                                    //             fontSize: width * 0.051),
-                                    //       ),
-                                    //     )),
+                                    Container(
+                                        height: height * 0.35,
+                                        padding: const EdgeInsets.fromLTRB(
+                                            20, 20, 20, 20),
+                                        decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              fit: BoxFit.cover,
+                                              image:
+                                                  AssetImage(showImages[index]),
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            color: Colors.white12),
+                                        child: Align(
+                                          alignment: Alignment.bottomCenter,
+                                          child: Text(
+                                            textAlign: TextAlign.center,
+                                            showQuotesList[index]['quotes'],
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontFamily: 'gc_m',
+                                              fontSize: width * 0.051,
+                                              shadows: const [
+                                                Shadow(
+                                                  offset: Offset(-2, -2),
+                                                  blurRadius: 16.5,
+                                                  color: Colors.black,
+                                                ),
+                                                Shadow(
+                                                  offset: Offset(3, 3),
+                                                  blurRadius: 16.5,
+                                                  color: Colors.black,
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        )),
                                   ],
                                 ),
                                 Padding(
@@ -146,6 +182,15 @@ class _ShowQuotesState extends State<ShowQuotes> {
                                                   text: showQuotesList[index]
                                                       ['quotes']),
                                             );
+                                            setState(() {
+                                              ScaffoldMessenger.of(context)
+                                                  .showSnackBar(const SnackBar(
+                                                      content: Align(
+                                                          alignment:
+                                                              Alignment.center,
+                                                          child: Text(
+                                                              'Text Copied'))));
+                                            });
                                           },
                                           icon: Icon(
                                             Icons.copy,
@@ -189,10 +234,13 @@ class _ShowQuotesState extends State<ShowQuotes> {
                                                         .ImageByteFormat.png));
                                             Uint8List img =
                                                 byteData!.buffer.asUint8List();
-                                            final path = await getApplicationDocumentsDirectory();
-                                            File file = File("${path.path}/img.png");
+                                            final path =
+                                                await getApplicationDocumentsDirectory();
+                                            File file =
+                                                File("${path.path}/img.png");
                                             file.writeAsBytes(img);
-                                            ShareExtend.share(file.path,"image");
+                                            ShareExtend.share(
+                                                file.path, "image");
                                           },
                                           icon: Icon(Icons.share,
                                               color: buttonColor,
