@@ -1676,31 +1676,31 @@ List allQuotesList = [
     'quotes': 'God is most glorified in us when we are most satisfied in Him.',
     'author': 'John Piper',
   },
-  {
-    'category': 'God  ',
-    'quotes': 'God moves in a mysterious way, His wonders to perform.',
-    'author': 'William Cowper',
-  },
-  {
-    'category': 'God  ',
-    'quotes': 'God doesn’t call the qualified, He qualifies the called.',
-    'author': 'Unknown',
-  },
-  {
-    'category': 'God  ',
-    'quotes': 'God does not play dice with the universe.',
-    'author': 'Albert Einstein',
-  },
-  {
-    'category': 'God  ',
-    'quotes': 'The function of prayer is not to influence God, but rather to change the nature of the one who prays.',
-    'author': 'Soren Kierkegaard',
-  },
-  {
-    'category': 'God  ',
-    'quotes': 'Coincidence is God’s way of remaining anonymous.',
-    'author': 'Albert Einstein',
-  },
+  // {
+  //   'category': 'God  ',
+  //   'quotes': 'God moves in a mysterious way, His wonders to perform.',
+  //   'author': 'William Cowper',
+  // },
+  // {
+  //   'category': 'God  ',
+  //   'quotes': 'God doesn’t call the qualified, He qualifies the called.',
+  //   'author': 'Unknown',
+  // },
+  // {
+  //   'category': 'God  ',
+  //   'quotes': 'God does not play dice with the universe.',
+  //   'author': 'Albert Einstein',
+  // },
+  // {
+  //   'category': 'God  ',
+  //   'quotes': 'The function of prayer is not to influence God, but rather to change the nature of the one who prays.',
+  //   'author': 'Soren Kierkegaard',
+  // },
+  // {
+  //   'category': 'God  ',
+  //   'quotes': 'Coincidence is God’s way of remaining anonymous.',
+  //   'author': 'Albert Einstein',
+  // },
   {
     'category': 'Age  ',
     'quotes': 'Do not regret growing older. It is a privilege denied to many.',
@@ -1751,31 +1751,31 @@ List allQuotesList = [
     'quotes': 'None are so old as those who have outlived enthusiasm.',
     'author': 'Henry David Thoreau',
   },
-  {
-    'category': 'Age  ',
-    'quotes': 'The secret of staying young is to live honestly, eat slowly, and lie about your age.',
-    'author': 'Lucille Ball',
-  },
-  {
-    'category': 'Age  ',
-    'quotes': 'In the end, it’s not the years in your life that count, it’s the life in your years.',
-    'author': 'Abraham Lincoln',
-  },
-  {
-    'category': 'Age  ',
-    'quotes': 'How old would you be if you didn’t know how old you are?',
-    'author': 'Satchel Paige',
-  },
-  {
-    'category': 'Age  ',
-    'quotes': 'Aging is just another word for living.',
-    'author': 'Cindy Joseph',
-  },
-  {
-    'category': 'Age  ',
-    'quotes': 'Anyone who stops learning is old, whether at twenty or eighty.',
-    'author': 'Henry Ford',
-  },
+  // {
+  //   'category': 'Age  ',
+  //   'quotes': 'The secret of staying young is to live honestly, eat slowly, and lie about your age.',
+  //   'author': 'Lucille Ball',
+  // },
+  // {
+  //   'category': 'Age  ',
+  //   'quotes': 'In the end, it’s not the years in your life that count, it’s the life in your years.',
+  //   'author': 'Abraham Lincoln',
+  // },
+  // {
+  //   'category': 'Age  ',
+  //   'quotes': 'How old would you be if you didn’t know how old you are?',
+  //   'author': 'Satchel Paige',
+  // },
+  // {
+  //   'category': 'Age  ',
+  //   'quotes': 'Aging is just another word for living.',
+  //   'author': 'Cindy Joseph',
+  // },
+  // {
+  //   'category': 'Age  ',
+  //   'quotes': 'Anyone who stops learning is old, whether at twenty or eighty.',
+  //   'author': 'Henry Ford',
+  // },
   {
     'category': 'Change  ',
     'quotes': 'The only way to make sense out of change is to plunge into it, move with it, and join the dance.',
@@ -1826,31 +1826,31 @@ List allQuotesList = [
     'quotes': 'If you don’t like something, change it. If you can’t change it, change your attitude.',
     'author': 'Maya Angelou',
   },
-  {
-    'category': 'Change  ',
-    'quotes': 'The secret of change is to focus all of your energy, not on fighting the old, but on building the new.',
-    'author': 'Socrates',
-  },
-  {
-    'category': 'Change  ',
-    'quotes': 'Change is painful, but nothing is as painful as staying stuck somewhere you don’t belong.',
-    'author': 'Mandy Hale',
-  },
-  {
-    'category': 'Change  ',
-    'quotes': 'When we are no longer able to change a situation, we are challenged to change ourselves.',
-    'author': 'Viktor E. Frankl',
-  },
-  {
-    'category': 'Change  ',
-    'quotes': 'Change is the law of life. And those who look only to the past or present are certain to miss the future.',
-    'author': 'John F. Kennedy',
-  },
-  {
-    'category': 'Change  ',
-    'quotes': 'The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.',
-    'author': 'Albert Einstein',
-  },
+  // {
+  //   'category': 'Change  ',
+  //   'quotes': 'The secret of change is to focus all of your energy, not on fighting the old, but on building the new.',
+  //   'author': 'Socrates',
+  // },
+  // {
+  //   'category': 'Change  ',
+  //   'quotes': 'Change is painful, but nothing is as painful as staying stuck somewhere you don’t belong.',
+  //   'author': 'Mandy Hale',
+  // },
+  // {
+  //   'category': 'Change  ',
+  //   'quotes': 'When we are no longer able to change a situation, we are challenged to change ourselves.',
+  //   'author': 'Viktor E. Frankl',
+  // },
+  // {
+  //   'category': 'Change  ',
+  //   'quotes': 'Change is the law of life. And those who look only to the past or present are certain to miss the future.',
+  //   'author': 'John F. Kennedy',
+  // },
+  // {
+  //   'category': 'Change  ',
+  //   'quotes': 'The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.',
+  //   'author': 'Albert Einstein',
+  // },
   {
     'category': 'Communication  ',
     'quotes': 'The most important thing in communication is hearing what isn’t said.',
@@ -1901,31 +1901,31 @@ List allQuotesList = [
     'quotes': 'The way we communicate with others and with ourselves ultimately determines the quality of our lives.',
     'author': 'Tony Robbins',
   },
-  {
-    'category': 'Communication  ',
-    'quotes': 'Speak clearly, if you speak at all; carve every word before you let it fall.',
-    'author': 'Oliver Wendell Holmes Sr.',
-  },
-  {
-    'category': 'Communication  ',
-    'quotes': 'Communication is the solvent of all problems and is the foundation for personal development.',
-    'author': 'Peter Shepherd',
-  },
-  {
-    'category': 'Communication  ',
-    'quotes': 'Effective communication is the bridge between confusion and clarity.',
-    'author': 'Nat Turner',
-  },
-  {
-    'category': 'Communication  ',
-    'quotes': 'Good words are worth much and cost little.',
-    'author': 'George Herbert',
-  },
-  {
-    'category': 'Communication  ',
-    'quotes': 'Think like a wise man but communicate in the language of the people.',
-    'author': 'William Butler Yeats',
-  },
+  // {
+  //   'category': 'Communication  ',
+  //   'quotes': 'Speak clearly, if you speak at all; carve every word before you let it fall.',
+  //   'author': 'Oliver Wendell Holmes Sr.',
+  // },
+  // {
+  //   'category': 'Communication  ',
+  //   'quotes': 'Communication is the solvent of all problems and is the foundation for personal development.',
+  //   'author': 'Peter Shepherd',
+  // },
+  // {
+  //   'category': 'Communication  ',
+  //   'quotes': 'Effective communication is the bridge between confusion and clarity.',
+  //   'author': 'Nat Turner',
+  // },
+  // {
+  //   'category': 'Communication  ',
+  //   'quotes': 'Good words are worth much and cost little.',
+  //   'author': 'George Herbert',
+  // },
+  // {
+  //   'category': 'Communication  ',
+  //   'quotes': 'Think like a wise man but communicate in the language of the people.',
+  //   'author': 'William Butler Yeats',
+  // },
   {
     'category': 'Environment  ',
     'quotes': 'The Earth does not belong to us: we belong to the Earth.',
@@ -1976,31 +1976,31 @@ List allQuotesList = [
     'quotes': 'The environment is where we all meet; where we all have a mutual interest; it is the one thing all of us share.',
     'author': 'Lady Bird Johnson',
   },
-  {
-    'category': 'Environment  ',
-    'quotes': 'The environment and the economy are really both two sides of the same coin. If we cannot sustain the environment, we cannot sustain ourselves.',
-    'author': 'Wangari Maathai',
-  },
-  {
-    'category': 'Environment  ',
-    'quotes': 'Earth provides enough to satisfy every man’s needs, but not every man’s greed.',
-    'author': 'Mahatma Gandhi',
-  },
-  {
-    'category': 'Environment  ',
-    'quotes': 'We do not inherit the earth from our ancestors, we borrow it from our children.',
-    'author': 'Native American Proverb',
-  },
-  {
-    'category': 'Environment  ',
-    'quotes': 'The environment is everything that isn’t me.',
-    'author': 'Albert Einstein',
-  },
-  {
-    'category': 'Environment  ',
-    'quotes': 'The greatest threat to our planet is the belief that someone else will save it.',
-    'author': 'Robert Swan',
-  },
+  // {
+  //   'category': 'Environment  ',
+  //   'quotes': 'The environment and the economy are really both two sides of the same coin. If we cannot sustain the environment, we cannot sustain ourselves.',
+  //   'author': 'Wangari Maathai',
+  // },
+  // {
+  //   'category': 'Environment  ',
+  //   'quotes': 'Earth provides enough to satisfy every man’s needs, but not every man’s greed.',
+  //   'author': 'Mahatma Gandhi',
+  // },
+  // {
+  //   'category': 'Environment  ',
+  //   'quotes': 'We do not inherit the earth from our ancestors, we borrow it from our children.',
+  //   'author': 'Native American Proverb',
+  // },
+  // {
+  //   'category': 'Environment  ',
+  //   'quotes': 'The environment is everything that isn’t me.',
+  //   'author': 'Albert Einstein',
+  // },
+  // {
+  //   'category': 'Environment  ',
+  //   'quotes': 'The greatest threat to our planet is the belief that someone else will save it.',
+  //   'author': 'Robert Swan',
+  // },
   {
     'category': 'Dreams  ',
     'quotes': 'The future belongs to those who believe in the beauty of their dreams.',
@@ -2051,31 +2051,31 @@ List allQuotesList = [
     'quotes': 'Go confidently in the direction of your dreams. Live the life you have imagined.',
     'author': 'Henry David Thoreau',
   },
-  {
-    'category': 'Dreams  ',
-    'quotes': 'The biggest adventure you can take is to live the life of your dreams.',
-    'author': 'Oprah Winfrey',
-  },
-  {
-    'category': 'Dreams  ',
-    'quotes': 'Dream big and dare to fail.',
-    'author': 'Norman Vaughan',
-  },
-  {
-    'category': 'Dreams  ',
-    'quotes': 'Hold fast to dreams, for if dreams die, life is a broken-winged bird that cannot fly.',
-    'author': 'Langston Hughes',
-  },
-  {
-    'category': 'Dreams  ',
-    'quotes': 'The only thing worse than starting something and failing is not starting something.',
-    'author': 'Seth Godin',
-  },
-  {
-    'category': 'Dreams  ',
-    'quotes': 'The only thing standing between you and your goal is the story you keep telling yourself as to why you can’t achieve it.',
-    'author': 'Jordan Belfort',
-  }
+  // {
+  //   'category': 'Dreams  ',
+  //   'quotes': 'The biggest adventure you can take is to live the life of your dreams.',
+  //   'author': 'Oprah Winfrey',
+  // },
+  // {
+  //   'category': 'Dreams  ',
+  //   'quotes': 'Dream big and dare to fail.',
+  //   'author': 'Norman Vaughan',
+  // },
+  // {
+  //   'category': 'Dreams  ',
+  //   'quotes': 'Hold fast to dreams, for if dreams die, life is a broken-winged bird that cannot fly.',
+  //   'author': 'Langston Hughes',
+  // },
+  // {
+  //   'category': 'Dreams  ',
+  //   'quotes': 'The only thing worse than starting something and failing is not starting something.',
+  //   'author': 'Seth Godin',
+  // },
+  // {
+  //   'category': 'Dreams  ',
+  //   'quotes': 'The only thing standing between you and your goal is the story you keep telling yourself as to why you can’t achieve it.',
+  //   'author': 'Jordan Belfort',
+  // }
 ];
 
 
@@ -2086,132 +2086,112 @@ List randomQuotes = [
     'author': 'Aristotle',
   },
   {
-    'quotes': 'The purpose of our lives is to be happy.',
-    'author': 'Dalai Lama',
-  },
-  {
-    'quotes':
-        'Choose a job you love, and you will never have to work a day in your life.',
-    'author': 'Confucius',
-  },
-  {
-    'quotes': 'A mother’s love is more beautiful than any fresh flower.',
-    'author': 'Debasish Mridha',
-  },
-  {
-    'quotes':
-        'Friendship is born at that moment when one person says to another, ‘What! You too? I thought I was the only one.',
-    'author': 'C.S. Lewis',
-  },
-  {
-    'quotes': 'The way to get started is to quit talking and begin doing.',
-    'author': 'Walt Disney',
-  },
-  {
-    'quotes': 'Courage is not the absence of fear, but the triumph over it.',
-    'author': 'Nelson Mandela',
-  },
-  {
-    'quotes':
-        'The only real prison is fear, and the only real freedom is freedom from fear.',
-    'author': 'Aung San Suu Kyi',
-  },
-  {
-    'quotes': 'The measure of intelligence is the ability to change.',
-    'author': 'Albert Einstein',
-  },
-  {
-    'quotes': 'Knowledge is power.',
-    'author': 'Francis Bacon',
-  },
-  {
-    'quotes': 'Get busy living or get busy dying.',
-    'author': 'Stephen King',
-  },
-  {
-    'quotes':
-        'The only limit to our realization of tomorrow is our doubts of today.',
+    'quotes': 'The only limit to our realization of tomorrow is our doubts of today.',
     'author': 'Franklin D. Roosevelt',
   },
   {
-    'quotes': 'It takes courage to grow up and become who you really are.',
-    'author': 'E.E. Cummings',
+    'quotes': 'Your time is limited, so don’t waste it living someone else’s life.',
+    'author': 'Steve Jobs',
   },
   {
-    'quotes': 'An investment in knowledge pays the best interest.',
-    'author': 'Benjamin Franklin',
-  },
-  {
-    'quotes':
-        'Success is not final, failure is not fatal: It is the courage to continue that counts.',
-    'author': 'Winston Churchill',
-  },
-  {
-    'quotes':
-        'The only way to achieve the impossible is to believe it is possible.',
-    'author': 'Charles Kingsleigh',
-  },
-  {
-    'quotes':
-        'Freedom is not worth having if it does not include the freedom to make mistakes.',
-    'author': 'Mahatma Gandhi',
-  },
-  {
-    'quotes': 'Intelligence without ambition is a bird without wings.',
-    'author': 'Salvador Dali',
-  },
-  {
-    'quotes': 'The true sign of intelligence is not knowledge but imagination.',
-    'author': 'Albert Einstein',
-  },
-  {
-    'quotes': 'A mother’s arms are more comforting than anyone else’s.',
-    'author': 'Princess Diana',
-  },
-  {
-    'quotes':
-        'Love recognizes no barriers. It jumps hurdles, leaps fences, penetrates walls to arrive at its destination full of hope.',
-    'author': 'Maya Angelou',
+    'quotes': 'The best revenge is massive success.',
+    'author': 'Frank Sinatra',
   },
   {
     'quotes': 'Life is what happens when you’re busy making other plans.',
     'author': 'John Lennon',
   },
   {
-    'quotes': 'The only true wisdom is in knowing you know nothing.',
-    'author': 'Socrates',
+    'quotes': 'In the end, we will remember not the words of our enemies, but the silence of our friends.',
+    'author': 'Martin Luther King Jr.',
+  },
+  {
+    'quotes': 'The only way to do great work is to love what you do.',
+    'author': 'Steve Jobs',
+  },
+  {
+    'quotes': 'Do not wait to strike till the iron is hot; but make it hot by striking.',
+    'author': 'William Butler Yeats',
+  },
+  {
+    'quotes': 'Whether you think you can or you think you can’t, you’re right.',
+    'author': 'Henry Ford',
+  },
+  {
+    'quotes': 'The only way to achieve the impossible is to believe it is possible.',
+    'author': 'Charles Kingsleigh',
+  },
+  {
+    'quotes': 'Success is not the key to happiness. Happiness is the key to success.',
+    'author': 'Albert Schweitzer',
+  },
+  {
+    'quotes': 'The only thing we have to fear is fear itself.',
+    'author': 'Franklin D. Roosevelt',
+  },
+  {
+    'quotes': 'If you can dream it, you can do it.',
+    'author': 'Walt Disney',
+  },
+  {
+    'quotes': 'Believe you can and you’re halfway there.',
+    'author': 'Theodore Roosevelt',
+  },
+  {
+    'quotes': 'The journey of a thousand miles begins with one step.',
+    'author': 'Lao Tzu',
+  },
+  {
+    'quotes': 'Don’t watch the clock; do what it does. Keep going.',
+    'author': 'Sam Levenson',
+  },
+  {
+    'quotes': 'The best preparation for tomorrow is doing your best today.',
+    'author': 'H. Jackson Brown Jr.',
+  },
+  {
+    'quotes': 'Success is not final, failure is not fatal: It is the courage to continue that counts.',
+    'author': 'Winston Churchill',
+  },
+  {
+    'quotes': 'The purpose of our lives is to be happy.',
+    'author': 'Dalai Lama',
   },
   {
     'quotes': 'Act as if what you do makes a difference. It does.',
     'author': 'William James',
   },
   {
-    'quotes':
-        'You are never too old to set another goal or to dream a new dream.',
-    'author': 'C.S. Lewis',
+    'quotes': 'Dream big and dare to fail.',
+    'author': 'Norman Vaughan',
   },
   {
-    'quotes':
-        'To the world, you are a mother, but to your family, you are the world.',
-    'author': 'Unknown',
+    'quotes': 'You miss 100% of the shots you don’t take.',
+    'author': 'Wayne Gretzky',
   },
   {
-    'quotes':
-        'Friendship is the only cement that will ever hold the world together.',
-    'author': 'Woodrow Wilson',
+    'quotes': 'Don’t wait. The time will never be just right.',
+    'author': 'Napoleon Hill',
   },
   {
-    'quotes':
-        'People who are crazy enough to think they can change the world, are the ones who do.',
-    'author': 'Rob Siltanen',
+    'quotes': 'You must be the change you wish to see in the world.',
+    'author': 'Mahatma Gandhi',
   },
   {
-    'quotes':
-        'He who is not courageous enough to take risks will accomplish nothing in life.',
-    'author': 'Muhammad Ali',
+    'quotes': 'To handle yourself, use your head; to handle others, use your heart.',
+    'author': 'Eleanor Roosevelt',
   },
   {
-    'quotes': 'The good life is one inspired by love and guided by knowledge.',
-    'author': 'Bertrand Russell',
+    'quotes': 'What lies behind us and what lies before us are tiny matters compared to what lies within us.',
+    'author': 'Ralph Waldo Emerson',
+  },
+  {
+    'quotes': 'Success usually comes to those who are too busy to be looking for it.',
+    'author': 'Henry David Thoreau',
+  },
+  {
+    'quotes': 'Do not go where the path may lead, go instead where there is no path and leave a trail.',
+    'author': 'Ralph Waldo Emerson',
   },
 ];
+

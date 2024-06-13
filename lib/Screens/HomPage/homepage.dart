@@ -262,7 +262,8 @@ class _HomePageState extends State<HomePage> {
                                             fontFamily: 'gc_m',
                                             fontSize: width * 0.045),
                                       ),
-                                    )),
+                                    ),
+                                ),
                               ),
                             ),
                             Row(
@@ -601,8 +602,6 @@ class _HomePageState extends State<HomePage> {
                           bottomButton(width, Icons.home, 'Home'),
                           GestureDetector(
                             onTap: () {
-                              showImages =
-                              allPopularPageImages[quoteImageIndex];
                               keyList = [];
                               for(int i=0; i<randomQuotes.length; i++){
                                 imgKey = GlobalKey();

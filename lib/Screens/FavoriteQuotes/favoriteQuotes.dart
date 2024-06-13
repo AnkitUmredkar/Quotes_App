@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
+import '../../ModelData/listFile.dart';
 import '../../utils/global.dart';
+import '../EditPage/editPage.dart';
 import '../quotesPages/showquotes.dart';
 
 class FavoriteQuotes extends StatefulWidget {
@@ -64,9 +66,7 @@ class _FavoriteQuotesState extends State<FavoriteQuotes> {
                         children: [
                           const SizedBox(height: 25),
                           Container(
-                            height: height * 0.44,
                             width: width,
-                            padding: EdgeInsets.only(bottom: height * 0.0145),
                             margin: const EdgeInsets.fromLTRB(0, 0, 30, 8),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
@@ -80,10 +80,14 @@ class _FavoriteQuotesState extends State<FavoriteQuotes> {
                                     RepaintBoundary(
                                       key: keyList[index],
                                       child: Container(
-                                          height: height * 0.35,
+                                          height: height * 0.38,
                                           padding: const EdgeInsets.fromLTRB(
-                                              20, 20, 20, 28),
+                                              20, 20, 20, 22),
                                           decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              fit: BoxFit.cover,
+                                              image: AssetImage(likedQuotesImg[index]),
+                                            ),
                                               borderRadius:
                                                   BorderRadius.circular(8),
                                               color: Colors.white12),
@@ -93,33 +97,66 @@ class _FavoriteQuotesState extends State<FavoriteQuotes> {
                                               textAlign: TextAlign.center,
                                               likedQuotesList[index].toString(),
                                               style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontFamily: 'gc_m',
-                                                  fontSize: width * 0.051),
+                                                color: Colors.white,
+                                                fontFamily: 'gc_m',
+                                                fontSize: width * 0.051,
+                                                shadows: const [
+                                                  Shadow(
+                                                    offset: Offset(-2, -2),
+                                                    blurRadius: 16.5,
+                                                    color: Colors.black,
+                                                  ),
+                                                  Shadow(
+                                                    offset: Offset(3, 3),
+                                                    blurRadius: 16.5,
+                                                    color: Colors.black,
+                                                  ),
+                                                ],
+                                              ),
                                             ),
                                           )),
                                     ),
-                                    // Container(
-                                    //     height: height * 0.35,
-                                    //     padding: const EdgeInsets.fromLTRB(20, 20, 20, 28),
-                                    //     decoration: BoxDecoration(
-                                    //         borderRadius: BorderRadius.circular(8), color: Colors.white12),
-                                    //     child: Align(
-                                    //       alignment: Alignment.bottomCenter,
-                                    //       child: Text(
-                                    //         textAlign: TextAlign.center,
-                                    //         showQuotesList[index]['quotes'],
-                                    //         style: TextStyle(
-                                    //             color: Colors.white,
-                                    //             fontFamily: 'gc_m',
-                                    //             fontSize: width * 0.051),
-                                    //       ),
-                                    //     )),
+                                    Container(
+                                        height: height * 0.38,
+                                        padding: const EdgeInsets.fromLTRB(
+                                            20, 20, 20, 22),
+                                        decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              fit: BoxFit.cover,
+                                              image: AssetImage(likedQuotesImg[index]),
+                                            ),
+                                            borderRadius:
+                                            BorderRadius.circular(8),
+                                            color: Colors.white12),
+                                        child: Align(
+                                          alignment: Alignment.bottomCenter,
+                                          child: Text(
+                                            textAlign: TextAlign.center,
+                                            likedQuotesList[index].toString(),
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontFamily: 'gc_m',
+                                              fontSize: width * 0.051,
+                                              shadows: const [
+                                                Shadow(
+                                                  offset: Offset(-2, -2),
+                                                  blurRadius: 16.5,
+                                                  color: Colors.black,
+                                                ),
+                                                Shadow(
+                                                  offset: Offset(3, 3),
+                                                  blurRadius: 16.5,
+                                                  color: Colors.black,
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ))
                                   ],
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 10, right: 10),
+                                  padding: EdgeInsets.only(
+                                      left: 11, right: 11,top:height * 0.0145,bottom: height * 0.0145),
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
@@ -162,20 +199,27 @@ class _FavoriteQuotesState extends State<FavoriteQuotes> {
                                           icon: Icon(Icons.share,
                                               color: buttonColor,
                                               size: width * 0.071)),
-                                      // IconButton(
-                                      //     onPressed: () {
-                                      //       editQuoteIndex = index;
-                                      //       Navigator.of(context)
-                                      //           .pushNamed('/editPage');
-                                      //     },
-                                      //     icon: Icon(Icons.edit,
-                                      //         color: buttonColor,
-                                      //         size: width * 0.071)),
+                                      IconButton(
+                                          onPressed: () {
+                                            imgIndexForEdit = likedQuotesImg[index];
+                                            editQuoteIndex = index;
+                                            Navigator.of(context)
+                                                .pushNamed('/editPage');
+                                          },
+                                          icon: Icon(Icons.edit,
+                                              color: buttonColor,
+                                              size: width * 0.071)),
                                       IconButton(
                                           onPressed: () {
                                             setState(() {
-                                              showLike[index] = false;
+                                                showLike[index] = false;
+                                                likedQuotesImg.remove(showImages[index]);
+
+                                              // print(showOnePageLike[index]);
+                                              // showOnePageLike[index] = false;
+                                              // print(showOnePageLike[index]);
                                               likedQuotesList.removeAt(index);
+                                              // likedQuotesImg.remove(likedQuotesImg[index]);
                                             });
                                           },
                                           icon: Icon(Icons.favorite_rounded,
@@ -204,5 +248,8 @@ List feelingLikeList = List.generate(feelingsText.length, (index) => [false,fals
 List familyLikeList = List.generate(familyText.length, (index) => [false,false,false,false,false,false,false,false,false,false]);
 List momentsLikeList = List.generate(momentsText.length, (index) => [false,false,false,false,false,false,false,false,false,false]);
 List otherLikeList = List.generate(otherText.length, (index) => [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]);
+List showOnePageLike =  [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false];
 List showLike = [];
+List likedQuotesImg = [];
 List likedQuotesList = [];
+int repeat = 0;

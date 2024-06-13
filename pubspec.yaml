@@ -39,6 +39,7 @@ dependencies:
   path_provider: ^2.1.3
   share_extend: ^2.0.0
   flutter_colorpicker: ^1.1.0
+  fluttertoast: ^8.2.6
 
 dev_dependencies:
   flutter_test:
@@ -313,6 +314,121 @@ flutter:
     - assets/images/CategoryWise_Images/BirthdayImages/l8.jpg
     - assets/images/CategoryWise_Images/BirthdayImages/l9.jpg
     - assets/images/CategoryWise_Images/BirthdayImages/l10.jpg
+    - assets/images/CategoryWise_Images/DeathImages/l1.jpg
+    - assets/images/CategoryWise_Images/DeathImages/l2.jpg
+    - assets/images/CategoryWise_Images/DeathImages/l3.jpg
+    - assets/images/CategoryWise_Images/DeathImages/l4.jpg
+    - assets/images/CategoryWise_Images/DeathImages/l5.jpg
+    - assets/images/CategoryWise_Images/DeathImages/l6.jpg
+    - assets/images/CategoryWise_Images/DeathImages/l7.jpg
+    - assets/images/CategoryWise_Images/DeathImages/l8.jpg
+    - assets/images/CategoryWise_Images/DeathImages/l9.jpg
+    - assets/images/CategoryWise_Images/DeathImages/l10.jpg
+    - assets/images/CategoryWise_Images/GodImages/l1.jpg
+    - assets/images/CategoryWise_Images/GodImages/l2.jpg
+    - assets/images/CategoryWise_Images/GodImages/l3.jpg
+    - assets/images/CategoryWise_Images/GodImages/l4.jpg
+    - assets/images/CategoryWise_Images/GodImages/l5.jpg
+    - assets/images/CategoryWise_Images/GodImages/l6.jpg
+    - assets/images/CategoryWise_Images/GodImages/l7.jpg
+    - assets/images/CategoryWise_Images/GodImages/l8.jpg
+    - assets/images/CategoryWise_Images/GodImages/l9.jpg
+    - assets/images/CategoryWise_Images/GodImages/l10.jpg
+    - assets/images/CategoryWise_Images/ChangeImages/l1.jpg
+    - assets/images/CategoryWise_Images/ChangeImages/l2.jpg
+    - assets/images/CategoryWise_Images/ChangeImages/l3.jpg
+    - assets/images/CategoryWise_Images/ChangeImages/l4.jpg
+    - assets/images/CategoryWise_Images/ChangeImages/l5.jpg
+    - assets/images/CategoryWise_Images/ChangeImages/l6.jpg
+    - assets/images/CategoryWise_Images/ChangeImages/l7.jpg
+    - assets/images/CategoryWise_Images/ChangeImages/l8.jpg
+    - assets/images/CategoryWise_Images/ChangeImages/l9.jpg
+    - assets/images/CategoryWise_Images/ChangeImages/l10.jpg
+    - assets/images/CategoryWise_Images/DreamsImages/l1.jpg
+    - assets/images/CategoryWise_Images/DreamsImages/l2.jpg
+    - assets/images/CategoryWise_Images/DreamsImages/l3.jpg
+    - assets/images/CategoryWise_Images/DreamsImages/l4.jpg
+    - assets/images/CategoryWise_Images/DreamsImages/l5.jpg
+    - assets/images/CategoryWise_Images/DreamsImages/l6.jpg
+    - assets/images/CategoryWise_Images/DreamsImages/l7.jpg
+    - assets/images/CategoryWise_Images/DreamsImages/l8.jpg
+    - assets/images/CategoryWise_Images/DreamsImages/l9.jpg
+    - assets/images/CategoryWise_Images/DreamsImages/l10.jpg
+    - assets/images/CategoryWise_Images/EnvImages/l1.jpg
+    - assets/images/CategoryWise_Images/EnvImages/l2.jpg
+    - assets/images/CategoryWise_Images/EnvImages/l3.jpg
+    - assets/images/CategoryWise_Images/EnvImages/l4.jpg
+    - assets/images/CategoryWise_Images/EnvImages/l5.jpg
+    - assets/images/CategoryWise_Images/EnvImages/l6.jpg
+    - assets/images/CategoryWise_Images/EnvImages/l7.jpg
+    - assets/images/CategoryWise_Images/EnvImages/l8.jpg
+    - assets/images/CategoryWise_Images/EnvImages/l9.jpg
+    - assets/images/CategoryWise_Images/EnvImages/l10.jpg
+    - assets/images/CategoryWise_Images/ComImages/l1.jpg
+    - assets/images/CategoryWise_Images/ComImages/l2.jpg
+    - assets/images/CategoryWise_Images/ComImages/l3.jpg
+    - assets/images/CategoryWise_Images/ComImages/l4.jpg
+    - assets/images/CategoryWise_Images/ComImages/l5.jpg
+    - assets/images/CategoryWise_Images/ComImages/l6.jpg
+    - assets/images/CategoryWise_Images/ComImages/l7.jpg
+    - assets/images/CategoryWise_Images/ComImages/l8.jpg
+    - assets/images/CategoryWise_Images/ComImages/l9.jpg
+    - assets/images/CategoryWise_Images/ComImages/l10.jpg
+    - assets/images/CategoryWise_Images/Age/l1.jpg
+    - assets/images/CategoryWise_Images/Age/l2.jpg
+    - assets/images/CategoryWise_Images/Age/l3.jpg
+    - assets/images/CategoryWise_Images/Age/l4.jpg
+    - assets/images/CategoryWise_Images/Age/l5.jpg
+    - assets/images/CategoryWise_Images/Age/l6.jpg
+    - assets/images/CategoryWise_Images/Age/l7.jpg
+    - assets/images/CategoryWise_Images/Age/l8.jpg
+    - assets/images/CategoryWise_Images/Age/l9.jpg
+    - assets/images/CategoryWise_Images/Age/l10.jpg
+    - assets/images/WallpaperImages/1.jpg
+    - assets/images/WallpaperImages/2.jpg
+    - assets/images/WallpaperImages/3.jpg
+    - assets/images/WallpaperImages/4.jpg
+    - assets/images/WallpaperImages/5.jpg
+    - assets/images/WallpaperImages/6.jpg
+    - assets/images/WallpaperImages/7.jpg
+    - assets/images/WallpaperImages/8.jpg
+    - assets/images/WallpaperImages/9.jpg
+    - assets/images/WallpaperImages/10.jpg
+    - assets/images/WallpaperImages/11.jpg
+    - assets/images/WallpaperImages/12.jpg
+    - assets/images/WallpaperImages/13.jpg
+    - assets/images/WallpaperImages/14.jpg
+    - assets/images/WallpaperImages/15.jpg
+    - assets/images/WallpaperImages/16.jpg
+    - assets/images/WallpaperImages/17.jpg
+    - assets/images/WallpaperImages/18.jpg
+    - assets/images/WallpaperImages/19.jpg
+    - assets/images/WallpaperImages/20.jpg
+    - assets/images/WallpaperImages/21.jpg
+    - assets/images/WallpaperImages/22.jpg
+    - assets/images/WallpaperImages/23.jpg
+    - assets/images/WallpaperImages/24.jpg
+    - assets/images/WallpaperImages/26.jpg
+    - assets/images/WallpaperImages/27.jpg
+    - assets/images/WallpaperImages/28.jpg
+    - assets/images/WallpaperImages/29.jpg
+    - assets/images/WallpaperImages/30.jpg
+    - assets/images/WallpaperImages/31.jpg
+    - assets/images/WallpaperImages/32.jpg
+    - assets/images/WallpaperImages/33.jpg
+    - assets/images/WallpaperImages/34.jpg
+    - assets/images/WallpaperImages/35.jpg
+    - assets/images/WallpaperImages/36.jpg
+    - assets/images/WallpaperImages/37.jpg
+    - assets/images/WallpaperImages/38.jpg
+    - assets/images/WallpaperImages/39.jpg
+    - assets/images/WallpaperImages/40.jpg
+    - assets/images/WallpaperImages/41.jpg
+    - assets/images/WallpaperImages/42.jpg
+    - assets/images/WallpaperImages/43.jpg
+    - assets/images/WallpaperImages/44.jpg
+    - assets/images/WallpaperImages/45.jpg
+    - assets/images/WallpaperImages/46.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

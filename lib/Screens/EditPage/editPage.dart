@@ -93,7 +93,11 @@ class _EditPageState extends State<EditPage> {
                         child: Container(
                             height: height * 0.4,
                             padding: const EdgeInsets.fromLTRB(20, 20, 20, 28),
-                            decoration: BoxDecoration(color: changeColor),
+                            decoration: BoxDecoration(color: changeColor,
+                            image: DecorationImage(
+                              image: AssetImage(imgIndexForEdit),
+                              fit: BoxFit.cover,
+                            ),),
                             child: Align(
                               alignment: Alignment.bottomCenter,
                               child: Text(
@@ -601,6 +605,7 @@ Column editField(double height, double width, var icon, String data) {
 var align = TextAlign.center;
 String fontFamily = 'gc_m';
 int editQuoteIndex = 0;
+String imgIndexForEdit = '';
 Color changeColor = Colors.black54;
 Color changeTextColor = Colors.white;
 double SliderRange = 22, lineHeight = 0;
