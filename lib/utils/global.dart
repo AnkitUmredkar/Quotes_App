@@ -118,17 +118,17 @@ List otherText = [
 ];
 
 List allPopularPageImages = [
-   [
-     'assets/images/CategoryWise_Images/LoveImages/l1.jpg',
-     'assets/images/CategoryWise_Images/LoveImages/l2.jpg',
-     'assets/images/CategoryWise_Images/LoveImages/l3.jpg',
-     'assets/images/CategoryWise_Images/LoveImages/l4.jpg',
-     'assets/images/CategoryWise_Images/LoveImages/l5.jpg',
-     'assets/images/CategoryWise_Images/LoveImages/l6.jpg',
-     'assets/images/CategoryWise_Images/LoveImages/l7.jpg',
-     'assets/images/CategoryWise_Images/LoveImages/l8.jpg',
-     'assets/images/CategoryWise_Images/LoveImages/l9.jpg',
-     'assets/images/CategoryWise_Images/LoveImages/l10.jpg',
+  [
+    'assets/images/CategoryWise_Images/LoveImages/l1.jpg',
+    'assets/images/CategoryWise_Images/LoveImages/l2.jpg',
+    'assets/images/CategoryWise_Images/LoveImages/l3.jpg',
+    'assets/images/CategoryWise_Images/LoveImages/l4.jpg',
+    'assets/images/CategoryWise_Images/LoveImages/l5.jpg',
+    'assets/images/CategoryWise_Images/LoveImages/l6.jpg',
+    'assets/images/CategoryWise_Images/LoveImages/l7.jpg',
+    'assets/images/CategoryWise_Images/LoveImages/l8.jpg',
+    'assets/images/CategoryWise_Images/LoveImages/l9.jpg',
+    'assets/images/CategoryWise_Images/LoveImages/l10.jpg',
   ],
   [
     'assets/images/CategoryWise_Images/LifeImages/l1.jpg',
@@ -193,17 +193,17 @@ List allPopularPageImages = [
 ];
 
 List allMotivationPageImages = [
-   [
-     'assets/images/CategoryWise_Images/InspirationImages/l1.jpg',
-     'assets/images/CategoryWise_Images/InspirationImages/l2.jpg',
-     'assets/images/CategoryWise_Images/InspirationImages/l3.jpg',
-     'assets/images/CategoryWise_Images/InspirationImages/l4.jpg',
-     'assets/images/CategoryWise_Images/InspirationImages/l5.jpg',
-     'assets/images/CategoryWise_Images/InspirationImages/l6.jpg',
-     'assets/images/CategoryWise_Images/InspirationImages/l7.jpg',
-     'assets/images/CategoryWise_Images/InspirationImages/l8.jpg',
-     'assets/images/CategoryWise_Images/InspirationImages/l9.jpg',
-     'assets/images/CategoryWise_Images/InspirationImages/l10.jpg',
+  [
+    'assets/images/CategoryWise_Images/InspirationImages/l1.jpg',
+    'assets/images/CategoryWise_Images/InspirationImages/l2.jpg',
+    'assets/images/CategoryWise_Images/InspirationImages/l3.jpg',
+    'assets/images/CategoryWise_Images/InspirationImages/l4.jpg',
+    'assets/images/CategoryWise_Images/InspirationImages/l5.jpg',
+    'assets/images/CategoryWise_Images/InspirationImages/l6.jpg',
+    'assets/images/CategoryWise_Images/InspirationImages/l7.jpg',
+    'assets/images/CategoryWise_Images/InspirationImages/l8.jpg',
+    'assets/images/CategoryWise_Images/InspirationImages/l9.jpg',
+    'assets/images/CategoryWise_Images/InspirationImages/l10.jpg',
   ],
   [
     'assets/images/CategoryWise_Images/WorkImages/l1.jpg',
@@ -268,17 +268,17 @@ List allMotivationPageImages = [
 ];
 
 List allFeelingsPageImages = [
-   [
-     'assets/images/CategoryWise_Images/AloneImages/l1.jpg',
-     'assets/images/CategoryWise_Images/AloneImages/l2.jpg',
-     'assets/images/CategoryWise_Images/AloneImages/l3.jpg',
-     'assets/images/CategoryWise_Images/AloneImages/l4.jpg',
-     'assets/images/CategoryWise_Images/AloneImages/l5.jpg',
-     'assets/images/CategoryWise_Images/AloneImages/l6.jpg',
-     'assets/images/CategoryWise_Images/AloneImages/l7.jpg',
-     'assets/images/CategoryWise_Images/AloneImages/l8.jpg',
-     'assets/images/CategoryWise_Images/AloneImages/l9.jpg',
-     'assets/images/CategoryWise_Images/AloneImages/l10.jpg',
+  [
+    'assets/images/CategoryWise_Images/AloneImages/l1.jpg',
+    'assets/images/CategoryWise_Images/AloneImages/l2.jpg',
+    'assets/images/CategoryWise_Images/AloneImages/l3.jpg',
+    'assets/images/CategoryWise_Images/AloneImages/l4.jpg',
+    'assets/images/CategoryWise_Images/AloneImages/l5.jpg',
+    'assets/images/CategoryWise_Images/AloneImages/l6.jpg',
+    'assets/images/CategoryWise_Images/AloneImages/l7.jpg',
+    'assets/images/CategoryWise_Images/AloneImages/l8.jpg',
+    'assets/images/CategoryWise_Images/AloneImages/l9.jpg',
+    'assets/images/CategoryWise_Images/AloneImages/l10.jpg',
   ],
   [
     'assets/images/CategoryWise_Images/SadImages/l1.jpg',
@@ -343,17 +343,17 @@ List allFeelingsPageImages = [
 ];
 
 List allFamilyPageImages = [
-   [
-     'assets/images/CategoryWise_Images/FamilyImages/l1.jpg',
-     'assets/images/CategoryWise_Images/FamilyImages/l2.jpg',
-     'assets/images/CategoryWise_Images/FamilyImages/l3.jpg',
-     'assets/images/CategoryWise_Images/FamilyImages/l4.jpg',
-     'assets/images/CategoryWise_Images/FamilyImages/l5.jpg',
-     'assets/images/CategoryWise_Images/FamilyImages/l6.jpg',
-     'assets/images/CategoryWise_Images/FamilyImages/l7.jpg',
-     'assets/images/CategoryWise_Images/FamilyImages/l8.jpg',
-     'assets/images/CategoryWise_Images/FamilyImages/l9.jpg',
-     'assets/images/CategoryWise_Images/FamilyImages/l10.jpg',
+  [
+    'assets/images/CategoryWise_Images/FamilyImages/l1.jpg',
+    'assets/images/CategoryWise_Images/FamilyImages/l2.jpg',
+    'assets/images/CategoryWise_Images/FamilyImages/l3.jpg',
+    'assets/images/CategoryWise_Images/FamilyImages/l4.jpg',
+    'assets/images/CategoryWise_Images/FamilyImages/l5.jpg',
+    'assets/images/CategoryWise_Images/FamilyImages/l6.jpg',
+    'assets/images/CategoryWise_Images/FamilyImages/l7.jpg',
+    'assets/images/CategoryWise_Images/FamilyImages/l8.jpg',
+    'assets/images/CategoryWise_Images/FamilyImages/l9.jpg',
+    'assets/images/CategoryWise_Images/FamilyImages/l10.jpg',
   ],
   [
     'assets/images/CategoryWise_Images/MomImages/l1.jpg',
@@ -418,17 +418,17 @@ List allFamilyPageImages = [
 ];
 
 List allMomentsPageImages = [
-   [
-     'assets/images/CategoryWise_Images/AnniversaryImages/l1.jpg',
-     'assets/images/CategoryWise_Images/AnniversaryImages/l2.jpg',
-     'assets/images/CategoryWise_Images/AnniversaryImages/l3.jpg',
-     'assets/images/CategoryWise_Images/AnniversaryImages/l4.jpg',
-     'assets/images/CategoryWise_Images/AnniversaryImages/l5.jpg',
-     'assets/images/CategoryWise_Images/AnniversaryImages/l6.jpg',
-     'assets/images/CategoryWise_Images/AnniversaryImages/l7.jpg',
-     'assets/images/CategoryWise_Images/AnniversaryImages/l8.jpg',
-     'assets/images/CategoryWise_Images/AnniversaryImages/l9.jpg',
-     'assets/images/CategoryWise_Images/AnniversaryImages/l10.jpg',
+  [
+    'assets/images/CategoryWise_Images/AnniversaryImages/l1.jpg',
+    'assets/images/CategoryWise_Images/AnniversaryImages/l2.jpg',
+    'assets/images/CategoryWise_Images/AnniversaryImages/l3.jpg',
+    'assets/images/CategoryWise_Images/AnniversaryImages/l4.jpg',
+    'assets/images/CategoryWise_Images/AnniversaryImages/l5.jpg',
+    'assets/images/CategoryWise_Images/AnniversaryImages/l6.jpg',
+    'assets/images/CategoryWise_Images/AnniversaryImages/l7.jpg',
+    'assets/images/CategoryWise_Images/AnniversaryImages/l8.jpg',
+    'assets/images/CategoryWise_Images/AnniversaryImages/l9.jpg',
+    'assets/images/CategoryWise_Images/AnniversaryImages/l10.jpg',
   ],
   [
     'assets/images/CategoryWise_Images/BirthdayImages/l1.jpg',
@@ -493,17 +493,17 @@ List allMomentsPageImages = [
 ];
 
 List allOtherPageImages = [
-   [
-     'assets/images/CategoryWise_Images/GodImages/l1.jpg',
-     'assets/images/CategoryWise_Images/GodImages/l2.jpg',
-     'assets/images/CategoryWise_Images/GodImages/l3.jpg',
-     'assets/images/CategoryWise_Images/GodImages/l4.jpg',
-     'assets/images/CategoryWise_Images/GodImages/l5.jpg',
-     'assets/images/CategoryWise_Images/GodImages/l6.jpg',
-     'assets/images/CategoryWise_Images/GodImages/l7.jpg',
-     'assets/images/CategoryWise_Images/GodImages/l8.jpg',
-     'assets/images/CategoryWise_Images/GodImages/l9.jpg',
-     'assets/images/CategoryWise_Images/GodImages/l10.jpg',
+  [
+    'assets/images/CategoryWise_Images/GodImages/l1.jpg',
+    'assets/images/CategoryWise_Images/GodImages/l2.jpg',
+    'assets/images/CategoryWise_Images/GodImages/l3.jpg',
+    'assets/images/CategoryWise_Images/GodImages/l4.jpg',
+    'assets/images/CategoryWise_Images/GodImages/l5.jpg',
+    'assets/images/CategoryWise_Images/GodImages/l6.jpg',
+    'assets/images/CategoryWise_Images/GodImages/l7.jpg',
+    'assets/images/CategoryWise_Images/GodImages/l8.jpg',
+    'assets/images/CategoryWise_Images/GodImages/l9.jpg',
+    'assets/images/CategoryWise_Images/GodImages/l10.jpg',
   ],
   [
     'assets/images/CategoryWise_Images/Age/l1.jpg',
@@ -565,6 +565,25 @@ List allOtherPageImages = [
     'assets/images/CategoryWise_Images/DreamsImages/l9.jpg',
     'assets/images/CategoryWise_Images/DreamsImages/l10.jpg',
   ],
+];
+
+List randomHomeImages = [
+  'assets/images/RandomImages/l4.jpg',
+  'assets/images/RandomImages/l5.jpg',
+  'assets/images/RandomImages/l6.jpg',
+  'assets/images/RandomImages/l7.jpg',
+  'assets/images/RandomImages/l8.jpg',
+  'assets/images/RandomImages/l9.jpg',
+  'assets/images/RandomImages/l1.jpg',
+  'assets/images/RandomImages/l2.jpg',
+  'assets/images/RandomImages/l10.jpg',
+  'assets/images/RandomImages/l11.jpg',
+  'assets/images/RandomImages/l3.jpg',
+  'assets/images/RandomImages/l12.jpg',
+  'assets/images/RandomImages/l13.jpg',
+  'assets/images/RandomImages/l14.jpg',
+  'assets/images/RandomImages/l15.jpg',
+  'assets/images/RandomImages/l16.jpg',
 ];
 
 Text headingOfHomepage(double width, String data) {

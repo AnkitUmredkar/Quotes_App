@@ -429,6 +429,22 @@ flutter:
     - assets/images/WallpaperImages/44.jpg
     - assets/images/WallpaperImages/45.jpg
     - assets/images/WallpaperImages/46.jpg
+    - assets/images/RandomImages/l1.jpg
+    - assets/images/RandomImages/l2.jpg
+    - assets/images/RandomImages/l3.jpg
+    - assets/images/RandomImages/l4.jpg
+    - assets/images/RandomImages/l5.jpg
+    - assets/images/RandomImages/l6.jpg
+    - assets/images/RandomImages/l7.jpg
+    - assets/images/RandomImages/l8.jpg
+    - assets/images/RandomImages/l9.jpg
+    - assets/images/RandomImages/l10.jpg
+    - assets/images/RandomImages/l11.jpg
+    - assets/images/RandomImages/l12.jpg
+    - assets/images/RandomImages/l13.jpg
+    - assets/images/RandomImages/l14.jpg
+    - assets/images/RandomImages/l15.jpg
+    - assets/images/RandomImages/l16.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

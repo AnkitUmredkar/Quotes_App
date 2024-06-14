@@ -2079,7 +2079,7 @@ List allQuotesList = [
 ];
 
 
-// todo -----------------> RandomQuotes
+// todo ----------------->
 List randomQuotes = [
   {
     'quotes': 'Love is composed of a single soul inhabiting two bodies.',
@@ -2194,4 +2194,110 @@ List randomQuotes = [
     'author': 'Ralph Waldo Emerson',
   },
 ];
+
+// todo -----------------> RandomQuotes for HomePage
+List randomHomeQuotes = [
+  {
+    'quotes': 'Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.',
+    'author': 'Buddha',
+  },
+  {
+    'quotes': 'Life is what we make it, always has been, always will be.',
+    'author': 'Grandma Moses',
+  },
+  {
+    'quotes': 'You only live once, but if you do it right, once is enough.',
+    'author': 'Mae West',
+  },
+  {
+    'quotes': 'In the end, it’s not the years in your life that count. It’s the life in your years.',
+    'author': 'Abraham Lincoln',
+  },
+  {
+    'quotes': 'To live is the rarest thing in the world. Most people exist, that is all.',
+    'author': 'Oscar Wilde',
+  },
+  {
+    'quotes': 'Good friends, good books, and a sleepy conscience: this is the ideal life.',
+    'author': 'Mark Twain',
+  },
+  {
+    'quotes': 'The biggest adventure you can take is to live the life of your dreams.',
+    'author': 'Oprah Winfrey',
+  },
+  {
+    'quotes': 'Do what you can, with what you have, where you are.',
+    'author': 'Theodore Roosevelt',
+  },
+  {
+    'quotes': 'To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.',
+    'author': 'Ralph Waldo Emerson',
+  },
+  {
+    'quotes': 'Go confidently in the direction of your dreams! Live the life you’ve imagined.',
+    'author': 'Henry David Thoreau',
+  },
+  {
+    'quotes': 'The best time to plant a tree was 20 years ago. The second best time is now.',
+    'author': 'Chinese Proverb',
+  },
+  {
+    'quotes': 'Your time is limited, so don’t waste it living someone else’s life.',
+    'author': 'Steve Jobs',
+  },
+  {
+    'quotes': 'Not how long, but how well you have lived is the main thing.',
+    'author': 'Seneca',
+  },
+  {
+    'quotes': 'If life were predictable it would cease to be life, and be without flavor.',
+    'author': 'Eleanor Roosevelt',
+  },
+  {
+    'quotes': 'In the end, we will remember not the words of our enemies, but the silence of our friends.',
+    'author': 'Martin Luther King Jr.',
+  },
+  {
+    'quotes': 'The purpose of life is to contribute in some way to making things better.',
+    'author': 'Robert F. Kennedy',
+  },
+  {
+    'quotes': 'It is our choices that show what we truly are, far more than our abilities.',
+    'author': 'J.K. Rowling',
+  },
+  {
+    'quotes': 'You have within you right now, everything you need to deal with whatever the world can throw at you.',
+    'author': 'Brian Tracy',
+  },
+  {
+    'quotes': 'The best way to predict your future is to create it.',
+    'author': 'Peter Drucker',
+  },
+  {
+    'quotes': 'Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.',
+    'author': 'Albert Schweitzer',
+  },
+  {
+    'quotes': 'Your life does not get better by chance, it gets better by change.',
+    'author': 'Jim Rohn',
+  },
+  {
+    'quotes': 'The only limit to our realization of tomorrow is our doubts of today.',
+    'author': 'Franklin D. Roosevelt',
+  },
+  {
+    'quotes': 'The best way to find yourself is to lose yourself in the service of others.',
+    'author': 'Mahatma Gandhi',
+  },
+  {
+    'quotes': 'Life is really simple, but we insist on making it complicated.',
+    'author': 'Confucius',
+  },
+  {
+    'quotes': 'The biggest risk is not taking any risk. In a world that is changing really quickly, the only strategy that is guaranteed to fail is not taking risks.',
+    'author': 'Mark Zuckerberg',
+  },
+];
+
+
 

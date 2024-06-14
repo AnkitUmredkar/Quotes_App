@@ -5,6 +5,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_extend/share_extend.dart';
@@ -237,6 +238,15 @@ class _OnePageQuotesState extends State<OnePageQuotes> {
                                   ClipboardData(
                                       text: randomQuotes[index]['quotes']),
                                 );
+                                Fluttertoast.showToast(
+                                  msg: 'Quote Copied to Clipboard',
+                                  toastLength: Toast.LENGTH_SHORT,
+                                  gravity: ToastGravity.BOTTOM,
+                                  timeInSecForIosWeb: 1,
+                                  backgroundColor: Colors.black,
+                                  textColor: Colors.white,
+                                  fontSize: 16,
+                                );
                             },
                             child: bottomButton(height, width, Icons.copy,
                                 Colors.white),
@@ -253,6 +263,15 @@ class _OnePageQuotesState extends State<OnePageQuotes> {
                                     format: ui.ImageByteFormat.png));
                                 Uint8List img = byteData!.buffer.asUint8List();
                                 ImageGallerySaver.saveImage(img);
+                                Fluttertoast.showToast(
+                                  msg: 'Image Saved To Gallery',
+                                  toastLength: Toast.LENGTH_SHORT,
+                                  gravity: ToastGravity.BOTTOM,
+                                  timeInSecForIosWeb: 2,
+                                  backgroundColor: Colors.black,
+                                  textColor: Colors.white,
+                                  fontSize: 16,
+                                );
                               },
                               child: bottomButton(height, width,
                                   Icons.file_download_outlined, Colors.white)),
@@ -289,11 +308,30 @@ class _OnePageQuotesState extends State<OnePageQuotes> {
                                   likedQuotesList
                                       .add(randomQuotes[index]['quotes']);
                                   likedQuotesImg.add(wallPaperImgList[index]);
+                                  Fluttertoast.showToast(
+                                    msg: 'Add To Favorites',
+                                    toastLength: Toast.LENGTH_SHORT,
+                                    gravity: ToastGravity.BOTTOM,
+                                    timeInSecForIosWeb: 2,
+                                    backgroundColor: Colors.black,
+                                    textColor: Colors.white,
+                                    fontSize: 16,
+                                  );
                                 } else {
                                   likedQuotesList
                                       .remove(randomQuotes[index]['quotes']);
                                   likedQuotesImg.remove(wallPaperImgList[index]);
+                                  Fluttertoast.showToast(
+                                    msg: 'Remove To Favorites',
+                                    toastLength: Toast.LENGTH_SHORT,
+                                    gravity: ToastGravity.BOTTOM,
+                                    timeInSecForIosWeb: 2,
+                                    backgroundColor: Colors.black,
+                                    textColor: Colors.white,
+                                    fontSize: 16,
+                                  );
                                 }
+
                               });
                             },
                             child: ClipOval(
@@ -332,7 +370,6 @@ class _OnePageQuotesState extends State<OnePageQuotes> {
     );
   }
 }
-List showLike = List.generate(randomQuotes.length, (index) => false);
 
 ClipOval bottomButton(double height, double width, var icon, Color color) {
   return ClipOval(
@@ -357,7 +394,6 @@ ClipOval bottomButton(double height, double width, var icon, Color color) {
     ),
   );
 }
-List onePageImages = [];
 List wallPaperImgList = [
   'assets/images/WallpaperImages/36.jpg',
   'assets/images/WallpaperImages/1.jpg',
@@ -436,5 +472,4 @@ List options = [
   'assets/images/WallpaperImages/34.jpg',
   'assets/images/WallpaperImages/35.jpg',
   'assets/images/WallpaperImages/37.jpg',
-
 ];

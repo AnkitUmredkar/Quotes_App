@@ -33,9 +33,9 @@ class _ShowQuotesState extends State<ShowQuotes> {
         body: Container(
           decoration: const BoxDecoration(
               gradient: LinearGradient(colors: [
-            Color(0xff1A1A36),
-            Colors.black87,
-          ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
+                Color(0xff1A1A36),
+                Colors.black87,
+              ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
           child: Stack(
             children: [
               Padding(
@@ -76,6 +76,18 @@ class _ShowQuotesState extends State<ShowQuotes> {
                             width: width,
                             margin: const EdgeInsets.fromLTRB(0, 0, 30, 10),
                             decoration: BoxDecoration(
+                              boxShadow: const[
+                                 BoxShadow(
+                                    color: Colors.black26,
+                                    blurRadius: 12,
+                                    offset: Offset(-2, -2),
+                                ),
+                                 BoxShadow(
+                                    color: Colors.black26,
+                                    blurRadius: 12,
+                                    offset: Offset(3, 3),
+                                ),
+                              ],
                               borderRadius: BorderRadius.circular(8),
                               color: Colors.black54,
                             ),
@@ -97,7 +109,7 @@ class _ShowQuotesState extends State<ShowQuotes> {
                                                     showImages[index]),
                                               ),
                                               borderRadius:
-                                                  BorderRadius.circular(8),
+                                              BorderRadius.circular(8),
                                               color: Colors.white12),
                                           child: Align(
                                             alignment: Alignment.bottomCenter,
@@ -111,12 +123,12 @@ class _ShowQuotesState extends State<ShowQuotes> {
                                                 shadows: const [
                                                   Shadow(
                                                     offset: Offset(-2, -2),
-                                                    blurRadius: 166,
+                                                    blurRadius: 16,
                                                     color: Colors.black87,
                                                   ),
                                                   Shadow(
                                                     offset: Offset(3, 3),
-                                                    blurRadius: 166,
+                                                    blurRadius: 16,
                                                     color: Colors.black87,
                                                   ),
                                                 ],
@@ -132,10 +144,10 @@ class _ShowQuotesState extends State<ShowQuotes> {
                                           image: DecorationImage(
                                             fit: BoxFit.cover,
                                             image:
-                                                AssetImage(showImages[index]),
+                                            AssetImage(showImages[index]),
                                           ),
                                           borderRadius:
-                                              BorderRadius.circular(8),
+                                          BorderRadius.circular(8),
                                           color: Colors.white12),
                                       child: Align(
                                         alignment: Alignment.bottomCenter,
@@ -172,34 +184,26 @@ class _ShowQuotesState extends State<ShowQuotes> {
                                       top: height * 0.0145),
                                   child: Row(
                                     mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                     children: [
                                       //todo ----------------------> Copy Button
                                       IconButton(
                                           onPressed: () {
-                                            Fluttertoast.showToast(
-                                                msg: 'Text Copied',
-                                              toastLength: Toast.LENGTH_SHORT,
-                                              gravity: ToastGravity.BOTTOM,
-                                              timeInSecForIosWeb: 2,
-                                              backgroundColor: Colors.black.withOpacity(0.7),
-                                              textColor: Colors.white,
-                                              fontSize: 16,
-                                            );
+                                            bool isToastShowing = false;
                                             Clipboard.setData(
                                               ClipboardData(
                                                   text: showQuotesList[index]
-                                                      ['quotes']),
+                                                  ['quotes']),
                                             );
-                                            setState(() {
-                                              ScaffoldMessenger.of(context)
-                                                  .showSnackBar(const SnackBar(
-                                                      content: Align(
-                                                          alignment:
-                                                              Alignment.center,
-                                                          child: Text(
-                                                              'Text Copied'))));
-                                            });
+                                            Fluttertoast.showToast(
+                                              msg: 'Text Copied',
+                                              toastLength: Toast.LENGTH_SHORT,
+                                              gravity: ToastGravity.BOTTOM,
+                                              timeInSecForIosWeb: 2,
+                                              backgroundColor: Colors.black,
+                                              textColor: Colors.white,
+                                              fontSize: 16,
+                                            );
                                           },
                                           icon: Icon(
                                             Icons.copy,
@@ -210,19 +214,28 @@ class _ShowQuotesState extends State<ShowQuotes> {
                                       IconButton(
                                           onPressed: () async {
                                             RenderRepaintBoundary boundary =
-                                                keyList[index]
-                                                        .currentContext!
-                                                        .findRenderObject()
-                                                    as RenderRepaintBoundary;
+                                            keyList[index]
+                                                .currentContext!
+                                                .findRenderObject()
+                                            as RenderRepaintBoundary;
                                             ui.Image image =
-                                                await boundary.toImage();
+                                            await boundary.toImage();
                                             ByteData? byteData =
-                                                await (image.toByteData(
-                                                    format: ui
-                                                        .ImageByteFormat.png));
+                                            await (image.toByteData(
+                                                format: ui
+                                                    .ImageByteFormat.png));
                                             Uint8List img =
-                                                byteData!.buffer.asUint8List();
+                                            byteData!.buffer.asUint8List();
                                             ImageGallerySaver.saveImage(img);
+                                            Fluttertoast.showToast(
+                                              msg: 'Image Saved To Gallery',
+                                              toastLength: Toast.LENGTH_SHORT,
+                                              gravity: ToastGravity.BOTTOM,
+                                              timeInSecForIosWeb: 2,
+                                              backgroundColor: Colors.black,
+                                              textColor: Colors.white,
+                                              fontSize: 16,
+                                            );
                                           },
                                           icon: Icon(Icons.download,
                                               color: buttonColor,
@@ -231,22 +244,22 @@ class _ShowQuotesState extends State<ShowQuotes> {
                                       IconButton(
                                           onPressed: () async {
                                             RenderRepaintBoundary boundary =
-                                                keyList[index]
-                                                        .currentContext!
-                                                        .findRenderObject()
-                                                    as RenderRepaintBoundary;
+                                            keyList[index]
+                                                .currentContext!
+                                                .findRenderObject()
+                                            as RenderRepaintBoundary;
                                             ui.Image image =
-                                                await boundary.toImage();
+                                            await boundary.toImage();
                                             ByteData? byteData =
-                                                await (image.toByteData(
-                                                    format: ui
-                                                        .ImageByteFormat.png));
+                                            await (image.toByteData(
+                                                format: ui
+                                                    .ImageByteFormat.png));
                                             Uint8List img =
-                                                byteData!.buffer.asUint8List();
+                                            byteData!.buffer.asUint8List();
                                             final path =
-                                                await getApplicationDocumentsDirectory();
+                                            await getApplicationDocumentsDirectory();
                                             File file =
-                                                File("${path.path}/img.png");
+                                            File("${path.path}/img.png");
                                             file.writeAsBytes(img);
                                             ShareExtend.share(
                                                 file.path, "image");
@@ -270,27 +283,46 @@ class _ShowQuotesState extends State<ShowQuotes> {
                                           onPressed: () {
                                             setState(() {
                                               showLike[index] =
-                                                  !showLike[index];
+                                              !showLike[index];
                                               if (showLike[index]) {
                                                 likedQuotesList.add(
                                                     showQuotesList[index]
-                                                        ['quotes']);
+                                                    ['quotes']);
                                                 likedQuotesImg
                                                     .add(showImages[index]);
+                                                Fluttertoast.showToast(
+                                                  msg: 'Add To Favorites',
+                                                  toastLength: Toast.LENGTH_SHORT,
+                                                  gravity: ToastGravity.BOTTOM,
+                                                  timeInSecForIosWeb: 2,
+                                                  backgroundColor: Colors.black,
+                                                  textColor: Colors.white,
+                                                  fontSize: 16,
+                                                );
                                               } else {
                                                 likedQuotesList.remove(
                                                     showQuotesList[index]
-                                                        ['quotes']);
+                                                    ['quotes']);
                                                 likedQuotesImg
                                                     .remove(showImages[index]);
+                                                Fluttertoast.showToast(
+                                                  msg: 'Remove From Favorites',
+                                                  toastLength: Toast.LENGTH_SHORT,
+                                                  gravity: ToastGravity.BOTTOM,
+                                                  timeInSecForIosWeb: 2,
+                                                  backgroundColor: Colors.black,
+                                                  textColor: Colors.white,
+                                                  fontSize: 16,
+                                                );
                                               }
                                             });
+
                                           },
                                           icon: Icon(
                                               (showLike[index] == true)
                                                   ? Icons.favorite_rounded
                                                   : Icons
-                                                      .favorite_border_rounded,
+                                                  .favorite_border_rounded,
                                               color: (showLike[index] == true)
                                                   ? Colors.red
                                                   : buttonColor,
