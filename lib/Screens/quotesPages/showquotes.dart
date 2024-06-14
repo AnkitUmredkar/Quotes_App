@@ -165,7 +165,7 @@ class _ShowQuotesState extends State<ShowQuotes> {
                                                 color: Colors.black87,
                                               ),
                                               Shadow(
-                                                offset: Offset(3, 3),
+                                                offset: Offset(4, 4),
                                                 blurRadius: 16,
                                                 color: Colors.black87,
                                               ),
