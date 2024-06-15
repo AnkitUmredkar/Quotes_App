@@ -2078,9 +2078,8 @@ List allQuotesList = [
   // }
 ];
 
-
-// todo ----------------->
-List randomQuotes = [
+// todo -----------------> randomOnePageQuotes
+List randomOnePageQuotes = [
   {
     'quotes': 'Love is composed of a single soul inhabiting two bodies.',
     'author': 'Aristotle',

@@ -33,13 +33,13 @@ class _ShowQuotesState extends State<ShowQuotes> {
         body: Container(
           decoration: const BoxDecoration(
               gradient: LinearGradient(colors: [
-                Color(0xff1A1A36),
-                Colors.black87,
-              ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
+            Color(0xff1A1A36),
+            Colors.black87,
+          ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
           child: Stack(
             children: [
               Padding(
-                padding: const EdgeInsets.all(14),
+                padding: EdgeInsets.all(width * 0.0355),
                 child: Align(
                     alignment: Alignment.topCenter,
                     child: Text(
@@ -51,7 +51,7 @@ class _ShowQuotesState extends State<ShowQuotes> {
                     )),
               ),
               Padding(
-                padding: const EdgeInsets.all(14),
+                padding: EdgeInsets.all(width * 0.0355),
                 child: Align(
                     alignment: Alignment.topLeft,
                     child: IconButton(
@@ -63,7 +63,7 @@ class _ShowQuotesState extends State<ShowQuotes> {
                     )),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 58, bottom: 20, left: 28),
+                padding: const EdgeInsets.only(top: 58, bottom: 20),
                 child: ListView.builder(
                     physics: const BouncingScrollPhysics(),
                     scrollDirection: Axis.vertical,
@@ -74,22 +74,16 @@ class _ShowQuotesState extends State<ShowQuotes> {
                           const SizedBox(height: 25),
                           Container(
                             width: width,
-                            margin: const EdgeInsets.fromLTRB(0, 0, 30, 10),
+                            margin: EdgeInsets.fromLTRB(width * 0.06, 0, width * 0.06, 8),
                             decoration: BoxDecoration(
-                              boxShadow: const[
-                                 BoxShadow(
-                                    color: Colors.black26,
-                                    blurRadius: 12,
-                                    offset: Offset(-2, -2),
-                                ),
-                                 BoxShadow(
-                                    color: Colors.black26,
-                                    blurRadius: 12,
-                                    offset: Offset(3, 3),
+                              boxShadow: const [
+                                BoxShadow(
+                                    color: Colors.black87,
+                                    blurRadius: 11
                                 ),
                               ],
                               borderRadius: BorderRadius.circular(8),
-                              color: Colors.black54,
+                              color: const Color(0xff0B0C0F),
                             ),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -99,42 +93,43 @@ class _ShowQuotesState extends State<ShowQuotes> {
                                     RepaintBoundary(
                                       key: keyList[index],
                                       child: Container(
-                                          height: height * 0.38,
-                                          padding: const EdgeInsets.fromLTRB(
-                                              20, 20, 20, 22),
-                                          decoration: BoxDecoration(
-                                              image: DecorationImage(
-                                                fit: BoxFit.cover,
-                                                image: AssetImage(
-                                                    showImages[index]),
-                                              ),
-                                              borderRadius:
-                                              BorderRadius.circular(8),
-                                              color: Colors.white12),
-                                          child: Align(
-                                            alignment: Alignment.bottomCenter,
-                                            child: Text(
-                                              textAlign: TextAlign.center,
-                                              showQuotesList[index]['quotes'],
-                                              style: TextStyle(
-                                                color: Colors.white,
-                                                fontFamily: 'gc_m',
-                                                fontSize: width * 0.051,
-                                                shadows: const [
-                                                  Shadow(
-                                                    offset: Offset(-2, -2),
-                                                    blurRadius: 16,
-                                                    color: Colors.black87,
-                                                  ),
-                                                  Shadow(
-                                                    offset: Offset(3, 3),
-                                                    blurRadius: 16,
-                                                    color: Colors.black87,
-                                                  ),
-                                                ],
-                                              ),
+                                        height: height * 0.38,
+                                        padding: const EdgeInsets.fromLTRB(
+                                            20, 20, 20, 22),
+                                        decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              fit: BoxFit.cover,
+                                              image:
+                                              AssetImage(showImages[index]),
                                             ),
-                                          )),
+                                            borderRadius:
+                                            BorderRadius.circular(8),
+                                            color: Colors.white12),
+                                        child: Align(
+                                          alignment: Alignment.bottomCenter,
+                                          child: Text(
+                                            textAlign: TextAlign.center,
+                                            showQuotesList[index]['quotes'],
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontFamily: 'gc_m',
+                                              fontSize: width * 0.051,
+                                              shadows: const [
+                                                Shadow(
+                                                  offset: Offset(-2, -2),
+                                                  blurRadius: 16,
+                                                  color: Colors.black87,
+                                                ),
+                                                Shadow(
+                                                  offset: Offset(3, 3),
+                                                  blurRadius: 16,
+                                                  color: Colors.black87,
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
                                     ),
                                     Container(
                                       height: height * 0.38,
@@ -165,7 +160,7 @@ class _ShowQuotesState extends State<ShowQuotes> {
                                                 color: Colors.black87,
                                               ),
                                               Shadow(
-                                                offset: Offset(4, 4),
+                                                offset: Offset(3, 3),
                                                 blurRadius: 16,
                                                 color: Colors.black87,
                                               ),
@@ -283,16 +278,22 @@ class _ShowQuotesState extends State<ShowQuotes> {
                                           onPressed: () {
                                             setState(() {
                                               showLike[index] =
-                                              !showLike[index];
+                                              !(showLike[index]);
                                               if (showLike[index]) {
-                                                likedQuotesList.add(
-                                                    showQuotesList[index]
-                                                    ['quotes']);
+                                                likedQuotesList.add({
+                                                  'quotes':
+                                                  showQuotesList[index]
+                                                  ['quotes'],
+                                                  'category':
+                                                  showQuotesList[index]
+                                                  ['category']
+                                                });
                                                 likedQuotesImg
                                                     .add(showImages[index]);
                                                 Fluttertoast.showToast(
                                                   msg: 'Add To Favorites',
-                                                  toastLength: Toast.LENGTH_SHORT,
+                                                  toastLength:
+                                                  Toast.LENGTH_SHORT,
                                                   gravity: ToastGravity.BOTTOM,
                                                   timeInSecForIosWeb: 2,
                                                   backgroundColor: Colors.black,
@@ -300,14 +301,12 @@ class _ShowQuotesState extends State<ShowQuotes> {
                                                   fontSize: 16,
                                                 );
                                               } else {
-                                                likedQuotesList.remove(
-                                                    showQuotesList[index]
-                                                    ['quotes']);
-                                                likedQuotesImg
-                                                    .remove(showImages[index]);
+                                                likedQuotesList.removeAt(index);
+                                                likedQuotesImg.removeAt(index);
                                                 Fluttertoast.showToast(
                                                   msg: 'Remove From Favorites',
-                                                  toastLength: Toast.LENGTH_SHORT,
+                                                  toastLength:
+                                                  Toast.LENGTH_SHORT,
                                                   gravity: ToastGravity.BOTTOM,
                                                   timeInSecForIosWeb: 2,
                                                   backgroundColor: Colors.black,
@@ -316,7 +315,6 @@ class _ShowQuotesState extends State<ShowQuotes> {
                                                 );
                                               }
                                             });
-
                                           },
                                           icon: Icon(
                                               (showLike[index] == true)

@@ -55,131 +55,134 @@ class _EditPageState extends State<EditPage> {
           child: Stack(
             children: [
               Padding(
-                padding: const EdgeInsets.all(14),
-                child: Stack(
-                  children: [
-                    Align(
-                        alignment: Alignment.topLeft,
-                        child: IconButton(
-                          icon: Icon(Icons.arrow_back,
-                              color: Colors.white, size: width * 0.08),
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                          },
-                        )),
-                    Align(
-                      alignment: Alignment.topCenter,
-                      child: Text(
-                        'Edit Quotes',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'gc_m',
-                            fontSize: width * 0.072),
+                padding: EdgeInsets.all(width * 0.0355),
+                child: Align(
+                  alignment: Alignment.topLeft,
+                  child: IconButton(
+                    icon: Icon(Icons.arrow_back,
+                        color: Colors.white, size: width * 0.08),
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                  ),),
+              ),
+              Padding(
+                padding: EdgeInsets.all(width * 0.035),
+                child: Align(
+                  alignment: Alignment.topCenter,
+                  child: Text(
+                    'Edit Quotes',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'gc_m',
+                        fontSize: width * 0.072),
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment.topRight,
+                child: Padding(
+                  padding: EdgeInsets.all(width * 0.035),
+                  child: PopupMenuButton(
+                    icon: Icon(Icons.more_vert,
+                        color: Colors.white, size: width * 0.08),
+                    itemBuilder: (context) => [
+                      const PopupMenuItem<int>(
+                        value: 0,
+                        child: Text('Download',
+                            style: TextStyle(fontSize: 20)),
                       ),
-                    ),
-                    Align(
-                      alignment: Alignment.topRight,
-                      child: PopupMenuButton(
-                        icon: Icon(Icons.more_vert,
-                            color: Colors.white, size: width * 0.08),
-                        itemBuilder: (context) => [
-                          const PopupMenuItem<int>(
-                            value: 0,
-                            child: Text('Download',
-                                style: TextStyle(fontSize: 20)),
-                          ),
-                          const PopupMenuItem<int>(
-                            value: 1,
-                            child:
-                                Text('Share', style: TextStyle(fontSize: 20)),
-                          ),
-                        ],
-                        onSelected: (item) async {
-                          switch (item) {
-                            case 0:
-                              RenderRepaintBoundary boundary =
-                                  keyList[editQuoteIndex]
-                                          .currentContext!
-                                          .findRenderObject()
-                                      as RenderRepaintBoundary;
-                              ui.Image image = await boundary.toImage();
-                              ByteData? byteData = await image.toByteData(
-                                  format: ui.ImageByteFormat.png);
-                              Uint8List img = byteData!.buffer.asUint8List();
-                              await ImageGallerySaver.saveImage(img);
+                      const PopupMenuItem<int>(
+                        value: 1,
+                        child:
+                        Text('Share', style: TextStyle(fontSize: 20)),
+                      ),
+                    ],
+                    onSelected: (item) async {
+                      switch (item) {
+                        case 0:
+                          RenderRepaintBoundary boundary =
+                          keyList[editQuoteIndex]
+                              .currentContext!
+                              .findRenderObject()
+                          as RenderRepaintBoundary;
+                          ui.Image image = await boundary.toImage();
+                          ByteData? byteData = await image.toByteData(
+                              format: ui.ImageByteFormat.png);
+                          Uint8List img = byteData!.buffer.asUint8List();
+                          await ImageGallerySaver.saveImage(img);
 
-                              Fluttertoast.showToast(
-                                msg: 'Image Saved To Gallery',
-                                toastLength: Toast.LENGTH_SHORT,
-                                gravity: ToastGravity.BOTTOM,
-                                timeInSecForIosWeb: 2,
-                                backgroundColor: Colors.black,
-                                textColor: Colors.white,
-                                fontSize: 16,
-                              );
-                              break;
-                            case 1:
-                              RenderRepaintBoundary boundary =
-                                  keyList[editQuoteIndex]
-                                          .currentContext!
-                                          .findRenderObject()
-                                      as RenderRepaintBoundary;
-                              ui.Image image = await boundary.toImage();
-                              ByteData? byteData = await (image.toByteData(
-                                  format: ui.ImageByteFormat.png));
-                              Uint8List img = byteData!.buffer.asUint8List();
-                              final path =
-                                  await getApplicationDocumentsDirectory();
-                              File file = File("${path.path}/img.png");
-                              file.writeAsBytes(img);
-                              ShareExtend.share(file.path, "image");
-                              break;
-                          }
-                        },
+                          Fluttertoast.showToast(
+                            msg: 'Image Saved To Gallery',
+                            toastLength: Toast.LENGTH_SHORT,
+                            gravity: ToastGravity.BOTTOM,
+                            timeInSecForIosWeb: 2,
+                            backgroundColor: Colors.black,
+                            textColor: Colors.white,
+                            fontSize: 16,
+                          );
+                          break;
+                        case 1:
+                          RenderRepaintBoundary boundary =
+                          keyList[editQuoteIndex]
+                              .currentContext!
+                              .findRenderObject()
+                          as RenderRepaintBoundary;
+                          ui.Image image = await boundary.toImage();
+                          ByteData? byteData = await (image.toByteData(
+                              format: ui.ImageByteFormat.png));
+                          Uint8List img = byteData!.buffer.asUint8List();
+                          final path =
+                          await getApplicationDocumentsDirectory();
+                          File file = File("${path.path}/img.png");
+                          file.writeAsBytes(img);
+                          ShareExtend.share(file.path, "image");
+                          break;
+                      }
+                    },
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: height * 0.18, bottom: 20),
+                child: RepaintBoundary(
+                  key: keyList[editQuoteIndex],
+                  child: Container(
+                    height: height * 0.4,
+                    margin: EdgeInsets.only(left: width * 0.04,right : width * 0.04),
+                    padding: const EdgeInsets.fromLTRB(20, 20, 20, 28),
+                    decoration: BoxDecoration(
+                      color: changeColor,
+                      image: DecorationImage(
+                        image: AssetImage(imgIndexForEdit),
+                        fit: BoxFit.cover,
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: height * 0.18, bottom: 20),
-                      child: RepaintBoundary(
-                        key: keyList[editQuoteIndex],
-                        child: Container(
-                            height: height * 0.4,
-                            padding: const EdgeInsets.fromLTRB(20, 20, 20, 28),
-                            decoration: BoxDecoration(
-                              color: changeColor,
-                              image: DecorationImage(
-                                image: AssetImage(imgIndexForEdit),
-                                fit: BoxFit.cover,
-                              ),
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Text(
+                        textAlign: align,
+                        showQuotesList[editQuoteIndex]['quotes'],
+                        style: TextStyle(
+                          height: lineHeight,
+                          color: changeTextColor,
+                          fontFamily: fontFamily,
+                          fontSize: SliderRange,
+                          shadows: const [
+                            Shadow(
+                              offset: Offset(-2, -2),
+                              blurRadius: 16.5,
+                              color: Colors.black,
                             ),
-                            child: Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                textAlign: align,
-                                showQuotesList[editQuoteIndex]['quotes'],
-                                style: TextStyle(
-                                  height: lineHeight,
-                                  color: changeTextColor,
-                                  fontFamily: fontFamily,
-                                  fontSize: SliderRange,
-                                  shadows: const [
-                                    Shadow(
-                                      offset: Offset(-2, -2),
-                                      blurRadius: 16.5,
-                                      color: Colors.black,
-                                    ),
-                                    Shadow(
-                                      offset: Offset(3, 3),
-                                      blurRadius: 16.5,
-                                      color: Colors.black,
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            )),
+                            Shadow(
+                              offset: Offset(3, 3),
+                              blurRadius: 16.5,
+                              color: Colors.black,
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ),),
                 ),
               ),
               Align(
@@ -189,14 +192,14 @@ class _EditPageState extends State<EditPage> {
                   width: width,
                   padding: const EdgeInsets.only(top: 16, bottom: 16),
                   decoration:
-                      const BoxDecoration(color: Color(0xff181A20), boxShadow: [
-                    BoxShadow(
-                      color: Colors.black54,
-                      spreadRadius: 1,
-                      blurRadius: 15,
-                      offset: Offset(-2, -2),
-                    ),
-                  ]),
+                      const BoxDecoration(color: Color(0xff181A20),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black87,
+                              blurRadius: 15
+                          ),
+                        ],
+                      ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -223,7 +226,7 @@ class _EditPageState extends State<EditPage> {
                                           onColorChanged: (Color value) {
                                             changeColor = value;
                                           },
-                                          pickerAreaHeightPercent: 0.8,
+                                          pickerAreaHeightPercent: height * 0.001,
                                         ),
                                       ),
                                       actions: [
@@ -265,7 +268,7 @@ class _EditPageState extends State<EditPage> {
                                           onColorChanged: (Color value) {
                                             changeTextColor = value;
                                           },
-                                          pickerAreaHeightPercent: 0.8,
+                                          pickerAreaHeightPercent: height * 0.001,
                                         ),
                                       ),
                                       actions: [
@@ -308,6 +311,7 @@ class _EditPageState extends State<EditPage> {
                                                 Slider(
                                                     activeColor:
                                                         const Color(0xff181A20),
+                                                    inactiveColor: Colors.grey,
                                                     max: 40,
                                                     min: 16,
                                                     divisions: 20,
@@ -540,7 +544,7 @@ class _EditPageState extends State<EditPage> {
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceAround,
                                             children: [
-                                              Container(
+                                              SizedBox(
                                                 width: width,
                                                 height: 110,
                                                 child: SingleChildScrollView(
@@ -644,8 +648,41 @@ class _EditPageState extends State<EditPage> {
                             child: editField(height, width,
                                 Icons.font_download_sharp, 'Fonts'),
                           ),
-                          editField(height, width, Icons.add_photo_alternate,
-                              'Image'),
+                          GestureDetector(
+                              onTap: () {
+                                showModalBottomSheet(context: context, builder: (context){
+                                  return Container(
+                                    width: width,
+                                    height: height,
+                                    padding: const EdgeInsets.all(18),
+                                    child: SingleChildScrollView(
+                                      physics: const BouncingScrollPhysics(),
+                                      child: Wrap(
+                                          spacing: width * 0.04,
+                                          children: List.generate(editImageOptionsList.length, (index) => GestureDetector(
+                                            onTap: (){setState(() {
+                                              imgIndexForEdit = editImageOptionsList[index];
+                                            });},child: Container(
+                                            height: height * 0.15,
+                                            width: width * 0.27,
+                                            margin: const EdgeInsets.only(bottom: 12),
+                                            decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.circular(10),
+                                              image: DecorationImage(
+                                                  image: AssetImage(editImageOptionsList[index]),
+                                                  fit: BoxFit.cover
+                                              ),
+                                            ),
+                                          ),
+                                          ),),
+
+                                      ),
+                                    ),
+                                  );
+                                });
+                              },
+                              child: editField(height, width, Icons.add_photo_alternate,
+                                  'Image'),),
                           editField(height, width, Icons.opacity, 'Opacity'),
                         ],
                       ),

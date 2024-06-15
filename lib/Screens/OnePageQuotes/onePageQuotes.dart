@@ -38,7 +38,7 @@ class _OnePageQuotesState extends State<OnePageQuotes> {
         body: PageView.builder(
           physics: const BouncingScrollPhysics(),
           scrollDirection: Axis.vertical,
-          itemCount: randomQuotes.length,
+          itemCount: randomOnePageQuotes.length,
           itemBuilder: (context, index) => Stack(
             children: [
               RepaintBoundary(
@@ -62,7 +62,7 @@ class _OnePageQuotesState extends State<OnePageQuotes> {
                             bottom: height * 0.12, top: height * 0.22),
                         width: width * 0.82,
                         child: Text(
-                          randomQuotes[index]['quotes'],
+                          randomOnePageQuotes[index]['quotes'],
                           style: TextStyle(
                               shadows: const [
                                 Shadow(
@@ -84,7 +84,7 @@ class _OnePageQuotesState extends State<OnePageQuotes> {
                       Align(
                         alignment: Alignment.centerRight,
                         child: Text(
-                          '- ${randomQuotes[index]['author']}',
+                          randomOnePageQuotes[index]['author'],
                           style: TextStyle(
                               shadows: const [
                                 Shadow(
@@ -135,7 +135,7 @@ class _OnePageQuotesState extends State<OnePageQuotes> {
                           //todo ------------------------> Set WallPaper
                           GestureDetector(
                               onTap: () {
-                                int SelectedIndex = index;
+                                int selectedIndex = index;
                                   showModalBottomSheet(context: context, builder: (context){
                                     return Container(
                                         width: width,
@@ -147,7 +147,7 @@ class _OnePageQuotesState extends State<OnePageQuotes> {
                                               spacing: 10,
                                               children: List.generate(options.length, (index) => GestureDetector(
                                                 onTap: (){setState(() {
-                                                  wallPaperImgList[SelectedIndex] = options[index];
+                                                  wallPaperImgList[selectedIndex] = options[index];
                                                 });},child: Container(
                                                   height: height / 4.2,
                                                   width: width / 3.5,
@@ -181,7 +181,7 @@ class _OnePageQuotesState extends State<OnePageQuotes> {
                               bottom: height * 0.12, top: height * 0.22,left: 7,right: 7),//l and r: width * 0.019
                           width: width * 0.82,
                           child: Text(
-                            randomQuotes[index]['quotes'],
+                            randomOnePageQuotes[index]['quotes'],
                             style: TextStyle(
                                 shadows: const [
                                   Shadow(
@@ -203,7 +203,7 @@ class _OnePageQuotesState extends State<OnePageQuotes> {
                         Align(
                           alignment: Alignment.centerRight,
                           child: Text(
-                            '- ${randomQuotes[index]['author']}',
+                            '- ${randomOnePageQuotes[index]['author']}',
                             style: TextStyle(
                                 shadows: const [
                                   Shadow(
@@ -236,7 +236,7 @@ class _OnePageQuotesState extends State<OnePageQuotes> {
                             onTap: (){
                                 Clipboard.setData(
                                   ClipboardData(
-                                      text: randomQuotes[index]['quotes']),
+                                      text: randomOnePageQuotes[index]['quotes']),
                                 );
                                 Fluttertoast.showToast(
                                   msg: 'Quote Copied to Clipboard',
@@ -303,14 +303,19 @@ class _OnePageQuotesState extends State<OnePageQuotes> {
                           GestureDetector(
                             onTap: () {
                               setState(() {
-                                showOnePageLike[index] = !showOnePageLike[index];
+                                showOnePageLike[index] =
+                                !(showOnePageLike[index]);
                                 if (showOnePageLike[index]) {
-                                  likedQuotesList
-                                      .add(randomQuotes[index]['quotes']);
-                                  likedQuotesImg.add(wallPaperImgList[index]);
+                                  likedQuotesList.add({
+                                    'quotes':
+                                    randomOnePageQuotes[index]
+                                    ['quotes']});
+                                  likedQuotesImg
+                                      .add(wallPaperImgList[index]);
                                   Fluttertoast.showToast(
                                     msg: 'Add To Favorites',
-                                    toastLength: Toast.LENGTH_SHORT,
+                                    toastLength:
+                                    Toast.LENGTH_SHORT,
                                     gravity: ToastGravity.BOTTOM,
                                     timeInSecForIosWeb: 2,
                                     backgroundColor: Colors.black,
@@ -318,12 +323,12 @@ class _OnePageQuotesState extends State<OnePageQuotes> {
                                     fontSize: 16,
                                   );
                                 } else {
-                                  likedQuotesList
-                                      .remove(randomQuotes[index]['quotes']);
-                                  likedQuotesImg.remove(wallPaperImgList[index]);
+                                  likedQuotesList.removeAt(index);
+                                  likedQuotesImg.removeAt(index);
                                   Fluttertoast.showToast(
-                                    msg: 'Remove To Favorites',
-                                    toastLength: Toast.LENGTH_SHORT,
+                                    msg: 'Remove From Favorites',
+                                    toastLength:
+                                    Toast.LENGTH_SHORT,
                                     gravity: ToastGravity.BOTTOM,
                                     timeInSecForIosWeb: 2,
                                     backgroundColor: Colors.black,

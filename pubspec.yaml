@@ -174,6 +174,16 @@ flutter:
     - assets/images/CategoryWise_Images/InspirationImages/l8.jpg
     - assets/images/CategoryWise_Images/InspirationImages/l9.jpg
     - assets/images/CategoryWise_Images/InspirationImages/l10.jpg
+    - assets/images/CategoryWise_Images/Motivate/l1.jpg
+    - assets/images/CategoryWise_Images/Motivate/l2.jpg
+    - assets/images/CategoryWise_Images/Motivate/l3.jpg
+    - assets/images/CategoryWise_Images/Motivate/l4.jpg
+    - assets/images/CategoryWise_Images/Motivate/l5.jpg
+    - assets/images/CategoryWise_Images/Motivate/l6.jpg
+    - assets/images/CategoryWise_Images/Motivate/l7.jpg
+    - assets/images/CategoryWise_Images/Motivate/l8.jpg
+    - assets/images/CategoryWise_Images/Motivate/l9.jpg
+    - assets/images/CategoryWise_Images/Motivate/l10.jpg
     - assets/images/CategoryWise_Images/CourageImages/l1.jpg
     - assets/images/CategoryWise_Images/CourageImages/l2.jpg
     - assets/images/CategoryWise_Images/CourageImages/l3.jpg
@@ -314,6 +324,33 @@ flutter:
     - assets/images/CategoryWise_Images/BirthdayImages/l8.jpg
     - assets/images/CategoryWise_Images/BirthdayImages/l9.jpg
     - assets/images/CategoryWise_Images/BirthdayImages/l10.jpg
+    - assets/images/CategoryWise_Images/RomanticImages/l1.jpg
+    - assets/images/CategoryWise_Images/RomanticImages/l2.jpg
+    - assets/images/CategoryWise_Images/RomanticImages/l3.jpg
+    - assets/images/CategoryWise_Images/RomanticImages/l4.jpg
+    - assets/images/CategoryWise_Images/RomanticImages/l5.jpg
+    - assets/images/CategoryWise_Images/RomanticImages/l6.jpg
+    - assets/images/CategoryWise_Images/RomanticImages/l7.jpg
+    - assets/images/CategoryWise_Images/RomanticImages/l8.jpg
+    - assets/images/CategoryWise_Images/RomanticImages/l9.jpg
+    - assets/images/CategoryWise_Images/RomanticImages/l10.jpg
+    - assets/images/CategoryWise_Images/DatingImages/l1.jpg
+    - assets/images/CategoryWise_Images/DatingImages/l2.jpg
+    - assets/images/CategoryWise_Images/DatingImages/l3.jpg
+    - assets/images/CategoryWise_Images/DatingImages/l4.jpg
+    - assets/images/CategoryWise_Images/DatingImages/l5.jpg
+    - assets/images/CategoryWise_Images/DatingImages/l6.jpg
+    - assets/images/CategoryWise_Images/DatingImages/l7.jpg
+    - assets/images/CategoryWise_Images/DatingImages/l8.jpg
+    - assets/images/CategoryWise_Images/DatingImages/l9.jpg
+    - assets/images/CategoryWise_Images/DatingImages/l10.jpg
+    - assets/images/CategoryWise_Images/WeddingImages/l1.jpg
+    - assets/images/CategoryWise_Images/WeddingImages/l2.jpg
+    - assets/images/CategoryWise_Images/WeddingImages/l3.jpg
+    - assets/images/CategoryWise_Images/WeddingImages/l4.jpg
+    - assets/images/CategoryWise_Images/WeddingImages/l5.jpg
+    - assets/images/CategoryWise_Images/WeddingImages/l6.jpg
+    - assets/images/CategoryWise_Images/WeddingImages/l7.jpg
     - assets/images/CategoryWise_Images/DeathImages/l1.jpg
     - assets/images/CategoryWise_Images/DeathImages/l2.jpg
     - assets/images/CategoryWise_Images/DeathImages/l3.jpg

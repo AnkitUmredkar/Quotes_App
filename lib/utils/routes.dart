@@ -8,8 +8,8 @@ import '../Screens/quotesPages/showquotes.dart';
 
 class AppRoutes{
   static Map<String, Widget Function(BuildContext)> routes = {
-    '/' : (context) => const Splashscreen(),
-    '/HomePage' : (context) => const HomePage(),
+    // '/' : (context) => const Splashscreen(),
+    '/' : (context) => const HomePage(),
     '/showQuotes' : (context) => const ShowQuotes(),
     '/onePageQuotes' : (context) => const OnePageQuotes(),
     '/editPage' : (context) => const EditPage(),

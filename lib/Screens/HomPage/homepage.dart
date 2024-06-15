@@ -25,9 +25,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
   @override
   void initState() {
     quotesModel = QuotesModel.toList(allQuotesList);
+    setState(() {});
     super.initState();
   }
 
@@ -38,7 +40,7 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
         body: Container(
-          padding: const EdgeInsets.all(17.5),
+          padding: EdgeInsets.all(width * 0.0385),
           decoration: const BoxDecoration(
               gradient: LinearGradient(colors: [
             Color(0xff1A1A36),
@@ -108,13 +110,13 @@ class _HomePageState extends State<HomePage> {
                                     'quotes':
                                         quotesModel!.quoteModelList[i].quote,
                                     'author':
-                                        quotesModel!.quoteModelList[i].author
+                                        quotesModel!.quoteModelList[i].author,
+                                    'category':
+                                    quotesModel!.quoteModelList[i].category,
                                   });
                                 }
                               }
-                              print(popularLikeList[index]);
                               showLike = popularLikeList[index];
-                              print(popularLikeList[index]);
                               Navigator.of(context).pushNamed('/showQuotes');
                             },
                             child: Column(
@@ -171,7 +173,9 @@ class _HomePageState extends State<HomePage> {
                                     'quotes':
                                         quotesModel!.quoteModelList[i].quote,
                                     'author':
-                                        quotesModel!.quoteModelList[i].author
+                                        quotesModel!.quoteModelList[i].author,
+                                    'category':
+                                    quotesModel!.quoteModelList[i].category,
                                   });
                                 }
                               }
@@ -246,27 +250,63 @@ class _HomePageState extends State<HomePage> {
                         ),
                         child: Column(
                           children: [
-                            RepaintBoundary(
-                              key: imgKey,
-                              child: Container(
-                                height: height * 0.38,
-                                padding:
-                                    const EdgeInsets.fromLTRB(20, 20, 20, 22),
-                                decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                        image: AssetImage(
-                                            randomHomeImages[getNextImg]),
-                                        fit: BoxFit.cover),
-                                    borderRadius: BorderRadius.circular(10),
-                                    color: Colors.white12),
-                                child: PageView.builder(
-                                  physics: const BouncingScrollPhysics(),
-                                  itemCount: randomQuotes.length,
-                                  itemBuilder: (context, index) => Align(
+                            Stack(
+                              children: [
+                                RepaintBoundary(
+                                  key: imgKey,
+                                  child: Container(
+                                    height: height * 0.38,
+                                    padding:
+                                        const EdgeInsets.fromLTRB(20, 20, 20, 22),
+                                    decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                            image: AssetImage(
+                                                randomHomeImages[getNextImg]),
+                                            fit: BoxFit.cover),
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: Colors.white12),
+                                    child:  Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Text(
+                                        randomHomeQuotes[getNextIndex]['quotes'],
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontFamily: 'gc_m',
+                                          fontSize: width * 0.051,
+                                          shadows: const [
+                                            Shadow(
+                                              offset: Offset(-2, -2),
+                                              blurRadius: 16,
+                                              color: Colors.black87,
+                                            ),
+                                            Shadow(
+                                              offset: Offset(3, 3),
+                                              blurRadius: 16,
+                                              color: Colors.black87,
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  height: height * 0.38,
+                                  padding:
+                                  const EdgeInsets.fromLTRB(20, 20, 20, 22),
+                                  decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              randomHomeImages[getNextImg]),
+                                          fit: BoxFit.cover),
+                                      borderRadius: BorderRadius.circular(10),
+                                      color: Colors.white12),
+                                  child: Align(
                                     alignment: Alignment.bottomCenter,
                                     child: Text(
+                                      randomHomeQuotes[getNextIndex]['quotes'],
                                       textAlign: TextAlign.center,
-                                      '" ${randomHomeQuotes[getNextIndex]['quotes']} "',
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontFamily: 'gc_m',
@@ -287,7 +327,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                   ),
                                 ),
-                              ),
+                              ],
                             ),
                             Padding(
                               padding: EdgeInsets.only(
@@ -339,6 +379,7 @@ class _HomePageState extends State<HomePage> {
                                         Uint8List img =
                                             byteData!.buffer.asUint8List();
                                         ImageGallerySaver.saveImage(img);
+
                                         Fluttertoast.showToast(
                                           msg: 'Image Saved To Gallery',
                                           toastLength: Toast.LENGTH_SHORT,
@@ -352,11 +393,53 @@ class _HomePageState extends State<HomePage> {
                                       icon: Icon(Icons.download,
                                           color: buttonColor,
                                           size: width * 0.071)),
+                                  //todo -------------------------> Like Button
                                   IconButton(
-                                      onPressed: () {},
-                                      icon: Icon(Icons.favorite_outline_rounded,
-                                          color: buttonColor,
+                                      onPressed: () {
+                                        setState(() {
+                                          randomLikeList[getNextIndex] =
+                                          !(randomLikeList[getNextIndex]);
+                                          if (randomLikeList[getNextIndex]) {
+                                            imgKey = GlobalKey();
+                                            keyList.add(imgKey);
+                                            likedQuotesList.add({'quotes': randomHomeQuotes[getNextIndex]['quotes']},);
+                                            likedQuotesImg.add(randomHomeImages[getNextImg]);
+                                            Fluttertoast.showToast(
+                                              msg: 'Add To Favorites',
+                                              toastLength:
+                                              Toast.LENGTH_SHORT,
+                                              gravity: ToastGravity.BOTTOM,
+                                              timeInSecForIosWeb: 2,
+                                              backgroundColor: Colors.black,
+                                              textColor: Colors.white,
+                                              fontSize: 16,
+                                            );
+                                          } else {
+                                            likedQuotesList.removeAt(getNextIndex);
+                                            likedQuotesImg.removeAt(getNextImg);
+                                            Fluttertoast.showToast(
+                                              msg: 'Remove From Favorites',
+                                              toastLength:
+                                              Toast.LENGTH_SHORT,
+                                              gravity: ToastGravity.BOTTOM,
+                                              timeInSecForIosWeb: 2,
+                                              backgroundColor: Colors.black,
+                                              textColor: Colors.white,
+                                              fontSize: 16,
+                                            );
+                                          }
+                                        });
+                                      },
+                                      icon: Icon(
+                                          (randomLikeList[getNextIndex] == true)
+                                              ? Icons.favorite_rounded
+                                              : Icons
+                                              .favorite_border_rounded,
+                                          color: (randomLikeList[getNextIndex] == true)
+                                              ? Colors.red
+                                              : buttonColor,
                                           size: width * 0.071)),
+                                  //todo ---------------------------> ShareButoon
                                   IconButton(
                                       onPressed: () async {
                                         RenderRepaintBoundary boundary = imgKey
@@ -415,7 +498,9 @@ class _HomePageState extends State<HomePage> {
                                     'quotes':
                                         quotesModel!.quoteModelList[i].quote,
                                     'author':
-                                        quotesModel!.quoteModelList[i].author
+                                        quotesModel!.quoteModelList[i].author,
+                                    'category':
+                                    quotesModel!.quoteModelList[i].category,
                                   });
                                 }
                               }
@@ -476,7 +561,9 @@ class _HomePageState extends State<HomePage> {
                                     'quotes':
                                         quotesModel!.quoteModelList[i].quote,
                                     'author':
-                                        quotesModel!.quoteModelList[i].author
+                                        quotesModel!.quoteModelList[i].author,
+                                    'category':
+                                    quotesModel!.quoteModelList[i].category,
                                   });
                                 }
                               }
@@ -536,7 +623,9 @@ class _HomePageState extends State<HomePage> {
                                     'quotes':
                                         quotesModel!.quoteModelList[i].quote,
                                     'author':
-                                        quotesModel!.quoteModelList[i].author
+                                        quotesModel!.quoteModelList[i].author,
+                                    'category':
+                                    quotesModel!.quoteModelList[i].category,
                                   });
                                 }
                               }
@@ -597,7 +686,9 @@ class _HomePageState extends State<HomePage> {
                                     'quotes':
                                         quotesModel!.quoteModelList[i].quote,
                                     'author':
-                                        quotesModel!.quoteModelList[i].author
+                                        quotesModel!.quoteModelList[i].author,
+                                    'category':
+                                    quotesModel!.quoteModelList[i].category,
                                   });
                                 }
                               }
@@ -657,7 +748,7 @@ class _HomePageState extends State<HomePage> {
                           GestureDetector(
                             onTap: () {
                               keyList = [];
-                              for (int i = 0; i < randomQuotes.length; i++) {
+                              for (int i = 0; i < randomOnePageQuotes.length; i++) {
                                 imgKey = GlobalKey();
                                 keyList.add(imgKey);
                               }
@@ -688,6 +779,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
 
 Column bottomButton(double width, var icon, String data) {
   return Column(
