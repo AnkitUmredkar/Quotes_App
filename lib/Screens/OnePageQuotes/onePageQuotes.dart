@@ -5,6 +5,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_wallpaper_manager/flutter_wallpaper_manager.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:path_provider/path_provider.dart';
@@ -25,6 +26,7 @@ class _OnePageQuotesState extends State<OnePageQuotes> {
   void initState(){
     super.initState();
     // Timer.periodic(const Duration(seconds: 1), (timer){
+
       setState(() {});
     // });
   }
@@ -59,7 +61,7 @@ class _OnePageQuotesState extends State<OnePageQuotes> {
                     children: [
                       Container(
                         margin: EdgeInsets.only(
-                            bottom: height * 0.12, top: height * 0.22),
+                            bottom: height * 0.12, top: height * 0.22,left: 7,right: 7),//l and r: width * 0.019
                         width: width * 0.82,
                         child: Text(
                           randomOnePageQuotes[index]['quotes'],
@@ -84,7 +86,7 @@ class _OnePageQuotesState extends State<OnePageQuotes> {
                       Align(
                         alignment: Alignment.centerRight,
                         child: Text(
-                          randomOnePageQuotes[index]['author'],
+                          '- ${randomOnePageQuotes[index]['author']}',
                           style: TextStyle(
                               shadows: const [
                                 Shadow(
@@ -132,43 +134,26 @@ class _OnePageQuotesState extends State<OnePageQuotes> {
                             child: bottomButton(height - 30, width - 30,
                                 Icons.arrow_back_ios, Colors.white),
                           ),
-                          //todo ------------------------> Set WallPaper
+                          //todo ----------> Copy
                           GestureDetector(
-                              onTap: () {
-                                int selectedIndex = index;
-                                  showModalBottomSheet(context: context, builder: (context){
-                                    return Container(
-                                        width: width,
-                                        height: height,
-                                        padding: const EdgeInsets.all(18),
-                                        child: SingleChildScrollView(
-                                          physics: const BouncingScrollPhysics(),
-                                          child: Wrap(
-                                              spacing: 10,
-                                              children: List.generate(options.length, (index) => GestureDetector(
-                                                onTap: (){setState(() {
-                                                  wallPaperImgList[selectedIndex] = options[index];
-                                                });},child: Container(
-                                                  height: height / 4.2,
-                                                  width: width / 3.5,
-                                                  margin: const EdgeInsets.only(bottom: 12),
-                                                  decoration: BoxDecoration(
-                                                    borderRadius: BorderRadius.circular(10),
-                                                    image: DecorationImage(
-                                                        image: AssetImage(options[index]),
-                                                        fit: BoxFit.cover
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),)
-
-                                          ),
-                                        ),
-                                      );
-                                  });
-                              },
-                              child: bottomButton(
-                                  height, width, Icons.image_outlined, Colors.white)),
+                            onTap: (){
+                              Clipboard.setData(
+                                ClipboardData(
+                                    text: randomOnePageQuotes[index]['quotes']),
+                              );
+                              Fluttertoast.showToast(
+                                msg: 'Quote Copied to Clipboard',
+                                toastLength: Toast.LENGTH_SHORT,
+                                gravity: ToastGravity.BOTTOM,
+                                timeInSecForIosWeb: 1,
+                                backgroundColor: Colors.black,
+                                textColor: Colors.white,
+                                fontSize: 16,
+                              );
+                            },
+                            child: bottomButton(height, width, Icons.copy,
+                                Colors.white),
+                          ),
                         ],
                       ),
                     ),
@@ -231,26 +216,88 @@ class _OnePageQuotesState extends State<OnePageQuotes> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          //todo ----------> Copy
+                          //todo ------------------------> Set WallPaper
                           GestureDetector(
-                            onTap: (){
-                                Clipboard.setData(
-                                  ClipboardData(
-                                      text: randomOnePageQuotes[index]['quotes']),
-                                );
-                                Fluttertoast.showToast(
-                                  msg: 'Quote Copied to Clipboard',
-                                  toastLength: Toast.LENGTH_SHORT,
-                                  gravity: ToastGravity.BOTTOM,
-                                  timeInSecForIosWeb: 1,
-                                  backgroundColor: Colors.black,
-                                  textColor: Colors.white,
-                                  fontSize: 16,
-                                );
-                            },
-                            child: bottomButton(height, width, Icons.copy,
-                                Colors.white),
-                          ),
+                              onTap: () {
+                                showModalBottomSheet(
+                                    context: context,
+                                    builder: (context) {
+                                      return Container(
+                                          height: 130,
+                                          width: width,
+                                          // decoration: const BoxDecoration(color: Color(0xff303030)),
+                                          padding: const EdgeInsets.all(10),
+                                          child: Column(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              TextButton(onPressed:(){
+                                                int selectedIndex = index;
+                                                showModalBottomSheet(context: context, builder: (context){
+                                                  return Container(
+                                                    width: width,
+                                                    height: height,
+                                                    padding: const EdgeInsets.all(18),
+                                                    child: SingleChildScrollView(
+                                                      physics: const BouncingScrollPhysics(),
+                                                      child: Wrap(
+                                                          spacing: 10,
+                                                          children: List.generate(options.length, (index) => GestureDetector(
+                                                            onTap: (){setState(() {
+                                                              wallPaperImgList[selectedIndex] = options[index];
+                                                            });},child: Container(
+                                                            height: height / 4.2,
+                                                            width: width / 3.5,
+                                                            margin: const EdgeInsets.only(bottom: 12),
+                                                            decoration: BoxDecoration(
+                                                              borderRadius: BorderRadius.circular(10),
+                                                              image: DecorationImage(
+                                                                  image: AssetImage(options[index]),
+                                                                  fit: BoxFit.cover
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          ),)
+
+                                                      ),
+                                                    ),
+                                                  );
+                                                });
+                                              }, child: Text('Change Theme',style: TextStyle(color: Colors.black87,fontFamily: 'gc_m',fontSize: width * 0.05),),),
+                                              TextButton(onPressed:() async {
+                                                RenderRepaintBoundary boundary =
+                                                keyList[index]
+                                                    .currentContext!
+                                                    .findRenderObject()
+                                                as RenderRepaintBoundary;
+                                                ui.Image image =
+                                                await boundary.toImage();
+                                                ByteData? byteData =
+                                                await (image.toByteData(
+                                                    format: ui
+                                                        .ImageByteFormat.png));
+                                                Uint8List img =
+                                                byteData!.buffer.asUint8List();
+                                                final path = await getApplicationDocumentsDirectory();
+                                                File file = File("${path.path}/img.png");
+                                                await file.writeAsBytes(img);
+                                                int location = WallpaperManager.BOTH_SCREEN;
+                                                bool result = await WallpaperManager.setWallpaperFromFile(file.path, location);
+                                                Fluttertoast.showToast(
+                                                  msg: 'WallPaper Applied Successfully',
+                                                  toastLength: Toast.LENGTH_SHORT,
+                                                  gravity: ToastGravity.BOTTOM,
+                                                  timeInSecForIosWeb: 2,
+                                                  backgroundColor: Colors.black,
+                                                  textColor: Colors.white,
+                                                  fontSize: 16,
+                                                );
+                                              }, child: Text('Set Wallpaper',style: TextStyle(color: Colors.black87,fontFamily: 'gc_m',fontSize: width * 0.05),),),
+                                            ],
+                                          ));
+                                    });
+                              },
+                              child: bottomButton(
+                                  height, width, Icons.image_outlined, Colors.white)),
                           //todo ----------> Download
                           GestureDetector(
                               onTap: () async {
@@ -405,7 +452,7 @@ List wallPaperImgList = [
   'assets/images/WallpaperImages/2.jpg',
   'assets/images/WallpaperImages/4.jpg',
   'assets/images/WallpaperImages/5.jpg',
-  'assets/images/WallpaperImages/6.jpg',
+  'assets/images/WallpaperImages/39.jpg',
   'assets/images/WallpaperImages/7.jpg',
   'assets/images/WallpaperImages/8.jpg',
   'assets/images/WallpaperImages/9.jpg',
@@ -433,7 +480,7 @@ List wallPaperImgList = [
 
 List options = [
   'assets/images/WallpaperImages/38.jpg',
-  'assets/images/WallpaperImages/39.jpg',
+  'assets/images/WallpaperImages/6.jpg',
   'assets/images/WallpaperImages/40.jpg',
   'assets/images/WallpaperImages/41.jpg',
   'assets/images/WallpaperImages/42.jpg',

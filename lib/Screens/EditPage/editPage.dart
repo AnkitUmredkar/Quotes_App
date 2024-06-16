@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -111,7 +110,6 @@ class _EditPageState extends State<EditPage> {
                               format: ui.ImageByteFormat.png);
                           Uint8List img = byteData!.buffer.asUint8List();
                           await ImageGallerySaver.saveImage(img);
-
                           Fluttertoast.showToast(
                             msg: 'Image Saved To Gallery',
                             toastLength: Toast.LENGTH_SHORT,
@@ -144,12 +142,12 @@ class _EditPageState extends State<EditPage> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: height * 0.18, bottom: 20),
+                padding: EdgeInsets.only(top: height * 0.18, bottom: 20,left: width * 0.04,right : width * 0.04),
                 child: RepaintBoundary(
                   key: keyList[editQuoteIndex],
                   child: Container(
                     height: height * 0.4,
-                    margin: EdgeInsets.only(left: width * 0.04,right : width * 0.04),
+                    width: width,
                     padding: const EdgeInsets.fromLTRB(20, 20, 20, 28),
                     decoration: BoxDecoration(
                       color: changeColor,

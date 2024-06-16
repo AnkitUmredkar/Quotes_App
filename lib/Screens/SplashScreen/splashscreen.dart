@@ -2,6 +2,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:quotes_app/Screens/HomPage/homepage.dart';
 
+double width = 0;
+
 class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key});
 
@@ -18,15 +20,15 @@ class _SplashscreenState extends State<Splashscreen>
   void initState() {
     super.initState();
     animationController =
-        AnimationController(vsync: this, duration: const Duration(seconds: 3));
-    animation = Tween<double>(begin: 25, end: 55).animate(animationController!);
+        AnimationController(vsync: this, duration: const Duration(seconds: 4));
+    animation = Tween<double>(begin: 0, end: 0).animate(animationController!);
 
     animationController!.addListener(() {
       setState(() {});
     });
     animationController!.forward();
 
-    Timer(const Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 4), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => const HomePage()),
@@ -42,8 +44,8 @@ class _SplashscreenState extends State<Splashscreen>
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
+    width = MediaQuery.of(context).size.width;
+    animation = Tween<double>(begin: width * 0.063, end: width * 0.114).animate(animationController!);
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.black87,

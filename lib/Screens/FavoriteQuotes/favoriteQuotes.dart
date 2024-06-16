@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'dart:ui' as ui;
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
@@ -38,7 +39,7 @@ class _FavoriteQuotesState extends State<FavoriteQuotes> {
                 Color(0xff1A1A36),
                 Colors.black87,
               ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
-          child: Stack(
+          child:  Stack(
             children: [
               Padding(
                 padding: EdgeInsets.all(width * 0.0355),
@@ -66,9 +67,19 @@ class _FavoriteQuotesState extends State<FavoriteQuotes> {
                           MaterialPageRoute(builder: (context) => const HomePage()),
                         );
                       },
-                    )),
+                    ),),
               ),
-              Padding(
+              (likedQuotesList.isEmpty) ? Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: Text('There is where you will see your liked quotes',
+                      textAlign: TextAlign.center,style: TextStyle(
+                          color: Colors.white70,
+                          fontSize: width * 0.06,
+                          fontFamily: 'gc_m'
+                      ),),
+                  )
+              ) : Padding(
                 padding: const EdgeInsets.only(top: 58, bottom: 20),
                 child: ListView.builder(
                     physics: const BouncingScrollPhysics(),

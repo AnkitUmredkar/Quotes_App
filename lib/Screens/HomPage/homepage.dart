@@ -749,7 +749,7 @@ class _HomePageState extends State<HomePage> {
                             onTap: () {
                               keyList = [];
                               for (int i = 0; i < randomOnePageQuotes.length; i++) {
-                                imgKey = GlobalKey();
+                                GlobalKey imgKey = GlobalKey();
                                 keyList.add(imgKey);
                               }
                               Navigator.of(context).pushNamed('/onePageQuotes');
