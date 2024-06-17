@@ -9,6 +9,7 @@ import 'package:flutter_wallpaper_manager/flutter_wallpaper_manager.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:quotes_app/Screens/HomPage/homepage.dart';
 import 'package:share_extend/share_extend.dart';
 import '../../ModelData/listFile.dart';
 import '../FavoriteQuotes/favoriteQuotes.dart';
@@ -282,8 +283,9 @@ class _OnePageQuotesState extends State<OnePageQuotes> {
                                                 await file.writeAsBytes(img);
                                                 int location = WallpaperManager.BOTH_SCREEN;
                                                 bool result = await WallpaperManager.setWallpaperFromFile(file.path, location);
+                                                Navigator.pop(context);
                                                 Fluttertoast.showToast(
-                                                  msg: 'WallPaper Applied Successfully',
+                                                  msg: 'Wallpaper Applied Successfully',
                                                   toastLength: Toast.LENGTH_SHORT,
                                                   gravity: ToastGravity.BOTTOM,
                                                   timeInSecForIosWeb: 2,
@@ -353,6 +355,8 @@ class _OnePageQuotesState extends State<OnePageQuotes> {
                                 showOnePageLike[index] =
                                 !(showOnePageLike[index]);
                                 if (showOnePageLike[index]) {
+                                  imgKey = GlobalKey();
+                                  favKeyList.add(imgKey);
                                   likedQuotesList.add({
                                     'quotes':
                                     randomOnePageQuotes[index]
@@ -372,6 +376,7 @@ class _OnePageQuotesState extends State<OnePageQuotes> {
                                 } else {
                                   likedQuotesList.removeAt(index);
                                   likedQuotesImg.removeAt(index);
+                                  favKeyList.removeAt(index);
                                   Fluttertoast.showToast(
                                     msg: 'Remove From Favorites',
                                     toastLength:

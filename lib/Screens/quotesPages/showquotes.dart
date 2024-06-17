@@ -6,6 +6,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:quotes_app/Screens/EditPage/editPage.dart';
+import 'package:quotes_app/Screens/HomPage/homepage.dart';
 import 'package:quotes_app/utils/global.dart';
 import 'package:share_extend/share_extend.dart';
 import 'dart:ui' as ui;
@@ -267,6 +268,7 @@ class _ShowQuotesState extends State<ShowQuotes> {
                                           onPressed: () {
                                             imgIndexForEdit = showImages[index];
                                             editQuoteIndex = index;
+                                            quote = showQuotesList[index]['quotes'];
                                             Navigator.of(context)
                                                 .pushNamed('/editPage');
                                           },
@@ -278,8 +280,10 @@ class _ShowQuotesState extends State<ShowQuotes> {
                                           onPressed: () {
                                             setState(() {
                                               showLike[index] =
-                                              !(showLike[index]);
+                                              !showLike[index];
                                               if (showLike[index]) {
+                                                imgKey = GlobalKey();
+                                                favKeyList.add(imgKey);
                                                 likedQuotesList.add({
                                                   'quotes':
                                                   showQuotesList[index]
@@ -301,6 +305,7 @@ class _ShowQuotesState extends State<ShowQuotes> {
                                                   fontSize: 16,
                                                 );
                                               } else {
+                                                favKeyList.removeAt(index);
                                                 likedQuotesList.removeAt(index);
                                                 likedQuotesImg.removeAt(index);
                                                 Fluttertoast.showToast(
@@ -347,4 +352,4 @@ List showImages = [];
 var icon = Icons.favorite_border_rounded, iconColor = buttonColor;
 List showQuotesList = [];
 String title = '';
-List keyList = [];
+List keyList = [],favKeyList = [];

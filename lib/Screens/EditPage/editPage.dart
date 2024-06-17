@@ -9,7 +9,6 @@ import 'package:path_provider/path_provider.dart';
 import 'package:share_extend/share_extend.dart';
 import '../../utils/global.dart';
 import 'dart:ui' as ui;
-
 import '../quotesPages/showquotes.dart';
 
 GlobalKey key = GlobalKey();
@@ -143,44 +142,84 @@ class _EditPageState extends State<EditPage> {
               ),
               Padding(
                 padding: EdgeInsets.only(top: height * 0.18, bottom: 20,left: width * 0.04,right : width * 0.04),
-                child: RepaintBoundary(
-                  key: keyList[editQuoteIndex],
-                  child: Container(
-                    height: height * 0.4,
-                    width: width,
-                    padding: const EdgeInsets.fromLTRB(20, 20, 20, 28),
-                    decoration: BoxDecoration(
-                      color: changeColor,
-                      image: DecorationImage(
-                        image: AssetImage(imgIndexForEdit),
-                        fit: BoxFit.cover,
-                      ),
+                child: Stack(
+                  children: [
+                    RepaintBoundary(
+                      key: keyList[editQuoteIndex],
+                      child: Container(
+                        height: height * 0.4,
+                        width: width,
+                        padding: const EdgeInsets.fromLTRB(20, 20, 20, 28),
+                        decoration: BoxDecoration(
+                          color: changeColor,
+                          image: DecorationImage(
+                            image: AssetImage(imgIndexForEdit),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        child: Align(
+                          alignment: Alignment.bottomCenter,
+                          child: Text(
+                            textAlign: align,
+                            quote,
+                            style: TextStyle(
+                              height: lineHeight,
+                              color: changeTextColor,
+                              fontFamily: fontFamily,
+                              fontSize: SliderRange,
+                              shadows: const [
+                                Shadow(
+                                  offset: Offset(-2, -2),
+                                  blurRadius: 16.5,
+                                  color: Colors.black,
+                                ),
+                                Shadow(
+                                  offset: Offset(3, 3),
+                                  blurRadius: 16.5,
+                                  color: Colors.black,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),),
                     ),
-                    child: Align(
-                      alignment: Alignment.bottomCenter,
-                      child: Text(
-                        textAlign: align,
-                        showQuotesList[editQuoteIndex]['quotes'],
-                        style: TextStyle(
-                          height: lineHeight,
-                          color: changeTextColor,
-                          fontFamily: fontFamily,
-                          fontSize: SliderRange,
-                          shadows: const [
-                            Shadow(
-                              offset: Offset(-2, -2),
-                              blurRadius: 16.5,
-                              color: Colors.black,
-                            ),
-                            Shadow(
-                              offset: Offset(3, 3),
-                              blurRadius: 16.5,
-                              color: Colors.black,
-                            ),
-                          ],
+                    Container(
+                      height: height * 0.4,
+                      width: width,
+                      padding: const EdgeInsets.fromLTRB(20, 20, 20, 28),
+                      decoration: BoxDecoration(
+                        color: changeColor,
+                        image: DecorationImage(
+                          image: AssetImage(imgIndexForEdit),
+                          fit: BoxFit.cover,
                         ),
                       ),
-                    ),),
+                      child: Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Text(
+                          textAlign: align,
+                          quote,
+                          style: TextStyle(
+                            height: lineHeight,
+                            color: changeTextColor,
+                            fontFamily: fontFamily,
+                            fontSize: SliderRange,
+                            shadows: const [
+                              Shadow(
+                                offset: Offset(-2, -2),
+                                blurRadius: 16.5,
+                                color: Colors.black,
+                              ),
+                              Shadow(
+                                offset: Offset(3, 3),
+                                blurRadius: 16.5,
+                                color: Colors.black,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),),
+                  ],
                 ),
               ),
               Align(
@@ -255,7 +294,7 @@ class _EditPageState extends State<EditPage> {
                                   builder: (context) {
                                     return AlertDialog(
                                       title: const Text(
-                                        'Set Background Color',
+                                        'Set Text Color',
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                         ),
@@ -548,8 +587,7 @@ class _EditPageState extends State<EditPage> {
                                                 child: SingleChildScrollView(
                                                   physics:
                                                       const BouncingScrollPhysics(),
-                                                  scrollDirection:
-                                                      Axis.horizontal,
+                                                  scrollDirection: Axis.horizontal,
                                                   child: Row(
                                                     children: List.generate(
                                                       fonts.length,
@@ -557,15 +595,13 @@ class _EditPageState extends State<EditPage> {
                                                           GestureDetector(
                                                         onTap: () {
                                                           setState(() {
-                                                            fontFamily =
-                                                                fonts[index];
+                                                            fontFamily = fonts[index];
                                                           });
                                                           update();
                                                         },
                                                         child: Container(
                                                           height:
                                                               height * 0.095,
-                                                          width: width * 0.28,
                                                           margin:
                                                               const EdgeInsets
                                                                   .only(
@@ -672,8 +708,8 @@ class _EditPageState extends State<EditPage> {
                                               ),
                                             ),
                                           ),
-                                          ),),
-
+                                          ),
+                                          ),
                                       ),
                                     ),
                                   );
@@ -722,6 +758,7 @@ Column editField(double height, double width, var icon, String data) {
 var align = TextAlign.center;
 String fontFamily = 'gc_m';
 int editQuoteIndex = 0;
+String quote = '';
 String imgIndexForEdit = '';
 Color changeColor = Colors.black54;
 Color changeTextColor = Colors.white;

@@ -115,7 +115,7 @@ class _FavoriteQuotesState extends State<FavoriteQuotes> {
                                 Stack(
                                   children: [
                                     RepaintBoundary(
-                                      key: keyList[index],
+                                      key: favKeyList[index],
                                       child: Container(
                                           height: height * 0.38,
                                           padding: const EdgeInsets.fromLTRB(
@@ -230,7 +230,7 @@ class _FavoriteQuotesState extends State<FavoriteQuotes> {
                                       IconButton(
                                           onPressed: () async {
                                             RenderRepaintBoundary boundary =
-                                            keyList[index]
+                                            favKeyList[index]
                                                 .currentContext!
                                                 .findRenderObject()
                                             as RenderRepaintBoundary;
@@ -260,7 +260,7 @@ class _FavoriteQuotesState extends State<FavoriteQuotes> {
                                       IconButton(
                                           onPressed: () async {
                                             RenderRepaintBoundary boundary =
-                                            keyList[index]
+                                            favKeyList[index]
                                                 .currentContext!
                                                 .findRenderObject()
                                             as RenderRepaintBoundary;
@@ -289,6 +289,7 @@ class _FavoriteQuotesState extends State<FavoriteQuotes> {
                                             imgIndexForEdit =
                                             likedQuotesImg[index];
                                             editQuoteIndex = index;
+                                            quote = likedQuotesList[index]['quotes'];
                                             Navigator.of(context)
                                                 .pushNamed('/editPage');
                                           },
@@ -299,7 +300,6 @@ class _FavoriteQuotesState extends State<FavoriteQuotes> {
                                       IconButton(
                                           onPressed: () {
                                             setState(() {
-
                                               for(int i=0; i<randomOnePageQuotes.length; i++){
                                                 if(likedQuotesList[index]['quotes'] == randomOnePageQuotes[i]['quotes']){
                                                   showOnePageLike[i] = false;
@@ -433,6 +433,8 @@ class _FavoriteQuotesState extends State<FavoriteQuotes> {
                                                   otherLikeList[5][i % 10] = false;
                                                 }
                                               }
+
+                                              favKeyList.removeAt(index);
                                               likedQuotesList.removeAt(index);
                                               likedQuotesImg.removeAt(index);Fluttertoast.showToast(
                                                 msg: 'Remove From Favorites',
