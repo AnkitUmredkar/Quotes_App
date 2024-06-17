@@ -62,7 +62,7 @@
 ###
 
 <div align="center">
-<video height="550" src="https://github.com/AnkitUmredkar/Resume_app/assets/149374001/b36fc31f-5f68-49e6-ada3-3599898bf8bd"/>
+<video height="550" src="https://github.com/AnkitUmredkar/Quotes_App/assets/149374001/815adae2-e8c7-4cac-a386-88eadc0e34c9"/>
 </div>
 
 
@@ -73,7 +73,7 @@
 ###
 
 <div align = "center">
-<a  href="https://github.com/AnkitUmredkar/Resume_app/tree/master/lib">-> 📂 Go To Dart File 📂<-</a>
+<a  href="https://github.com/AnkitUmredkar/Quotes_App/tree/master/lib">-> 📂 Go To Dart File 📂<-</a>
 </div>
 
 
