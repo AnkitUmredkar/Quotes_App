@@ -50,9 +50,9 @@
 ###
 
 <div align="center">
-<img height="550" src="https://github.com/AnkitUmredkar/Quotes_App/assets/149374001/6adae275-56d6-48cc-9cc4-4e0b5e47ff5e"/>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img height="550" src="https://github.com/AnkitUmredkar/Quotes_App/assets/149374001/56205d06-5284-4345-9640-e15639c75060"/>
+<img height="550" align ="left" src="https://github.com/AnkitUmredkar/Quotes_App/assets/149374001/6adae275-56d6-48cc-9cc4-4e0b5e47ff5e"/>
+<img height="550" src="https://github.com/AnkitUmredkar/Quotes_App/assets/149374001/0a1705a2-3a2e-4940-a289-8c317ec4d9cd"/>
+<img height="550" align ="right" src="https://github.com/AnkitUmredkar/Quotes_App/assets/149374001/56205d06-5284-4345-9640-e15639c75060"/>
 </div>
 
 ###
