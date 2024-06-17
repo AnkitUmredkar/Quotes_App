@@ -62,7 +62,7 @@
 ###
 
 <div align="center">
-<video height="550" src="https://github.com/AnkitUmredkar/Quotes_App/assets/149374001/815adae2-e8c7-4cac-a386-88eadc0e34c9"/>
+<video height="550" src="https://github.com/AnkitUmredkar/Quotes_App/assets/149374001/5ab6fc4a-22ce-4cc0-9a60-4c24395b5ddb"/>
 </div>
 
 
