@@ -24,7 +24,8 @@ class FavoriteQuotes extends StatefulWidget {
 class _FavoriteQuotesState extends State<FavoriteQuotes> {
   @override
   void initState(){
-    setState(() {});
+    setState(() {
+    });
     super.initState();
   }
   @override
@@ -436,7 +437,8 @@ class _FavoriteQuotesState extends State<FavoriteQuotes> {
 
                                               favKeyList.removeAt(index);
                                               likedQuotesList.removeAt(index);
-                                              likedQuotesImg.removeAt(index);Fluttertoast.showToast(
+                                              likedQuotesImg.removeAt(index);
+                                              Fluttertoast.showToast(
                                                 msg: 'Remove From Favorites',
                                                 toastLength: Toast.LENGTH_SHORT,
                                                 gravity: ToastGravity.BOTTOM,

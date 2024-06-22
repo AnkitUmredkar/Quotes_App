@@ -30,7 +30,8 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     quotesModel = QuotesModel.toList(allQuotesList);
     setState(() {
-    favKeyList.add(imgKey);
+    //   imgKey = GlobalKey();
+    // favKeyList.add(imgKey);
     });
     super.initState();
   }
@@ -224,8 +225,6 @@ class _HomePageState extends State<HomePage> {
                               if (getNextIndex == randomHomeQuotes.length-1) {
                                 getNextIndex = 0;
                               }
-                              imgKey = GlobalKey();
-                              favKeyList.add(imgKey);
                             });
                           },
                           child: Text('NEXT',
@@ -257,11 +256,11 @@ class _HomePageState extends State<HomePage> {
                             Stack(
                               children: [
                                 RepaintBoundary(
-                                  key: favKeyList[getNextIndex],
+                                  key: randomKeyList[getNextIndex],
                                   child: Container(
                                     height: height * 0.38,
                                     padding:
-                                        const EdgeInsets.fromLTRB(20, 20, 20, 22),
+                                    const EdgeInsets.fromLTRB(20, 20, 20, 22),
                                     decoration: BoxDecoration(
                                         image: DecorationImage(
                                             image: AssetImage(
@@ -269,7 +268,7 @@ class _HomePageState extends State<HomePage> {
                                             fit: BoxFit.cover),
                                         borderRadius: BorderRadius.circular(10),
                                         color: Colors.white12),
-                                    child:  Align(
+                                    child: Align(
                                       alignment: Alignment.bottomCenter,
                                       child: Text(
                                         randomHomeQuotes[getNextIndex]['quotes'],
@@ -370,7 +369,7 @@ class _HomePageState extends State<HomePage> {
                                   //todo ----------------------> Download Button
                                   IconButton(
                                       onPressed: () async {
-                                        RenderRepaintBoundary boundary = favKeyList[getNextIndex]
+                                        RenderRepaintBoundary boundary = randomKeyList[getNextIndex]
                                                 .currentContext!
                                                 .findRenderObject()
                                             as RenderRepaintBoundary;
@@ -401,8 +400,9 @@ class _HomePageState extends State<HomePage> {
                                   IconButton(
                                       onPressed: () {
                                         setState(() {
-                                          randomLikeList[getNextIndex] =
-                                          !(randomLikeList[getNextIndex]);
+                                          print(randomLikeList[getNextIndex]);
+                                          randomLikeList[getNextIndex] = !(randomLikeList[getNextIndex]);
+                                          print(randomLikeList[getNextIndex]);
                                           if (randomLikeList[getNextIndex]) {
                                             imgKey = GlobalKey();
                                             favKeyList.add(imgKey);
@@ -419,9 +419,17 @@ class _HomePageState extends State<HomePage> {
                                               fontSize: 16,
                                             );
                                           } else {
-                                            favKeyList.removeAt(getNextIndex);
-                                            likedQuotesList.removeAt(getNextIndex);
-                                            likedQuotesImg.removeAt(getNextImg);
+                                            for(int i=0; i<likedQuotesList.length; i++){
+                                              if(randomHomeQuotes[getNextIndex]['quotes'] == likedQuotesList[i]['quotes']){
+                                                likedQuotesList.removeAt(i);
+                                                favKeyList.removeAt(i);
+                                              }
+                                            }
+                                            for(int i=0; i<likedQuotesImg.length; i++){
+                                              if(randomHomeImages[getNextIndex]== likedQuotesImg[i]){
+                                                likedQuotesImg.removeAt(i);
+                                              }
+                                            }
                                             Fluttertoast.showToast(
                                               msg: 'Remove From Favorites',
                                               toastLength:
@@ -447,7 +455,7 @@ class _HomePageState extends State<HomePage> {
                                   //todo ---------------------------> ShareButoon
                                   IconButton(
                                       onPressed: () async {
-                                        RenderRepaintBoundary boundary = favKeyList[getNextIndex]
+                                        RenderRepaintBoundary boundary = randomKeyList[getNextIndex]
                                                 .currentContext!
                                                 .findRenderObject()
                                             as RenderRepaintBoundary;
@@ -805,3 +813,4 @@ Column bottomButton(double width, var icon, String data) {
 }
 
 int getNextIndex = 0, quoteImageIndex = 0, getNextImg = 0;
+List randomKeyList = List.generate(randomHomeQuotes.length, (index) => imgKey);

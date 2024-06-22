@@ -279,8 +279,7 @@ class _ShowQuotesState extends State<ShowQuotes> {
                                       IconButton(
                                           onPressed: () {
                                             setState(() {
-                                              showLike[index] =
-                                              !showLike[index];
+                                              showLike[index] = !showLike[index];
                                               if (showLike[index]) {
                                                 imgKey = GlobalKey();
                                                 favKeyList.add(imgKey);
@@ -305,9 +304,13 @@ class _ShowQuotesState extends State<ShowQuotes> {
                                                   fontSize: 16,
                                                 );
                                               } else {
-                                                favKeyList.removeAt(index);
-                                                likedQuotesList.removeAt(index);
-                                                likedQuotesImg.removeAt(index);
+                                                for(int i=0; i<likedQuotesList.length; i++){
+                                                  if(showQuotesList[index]['quotes'] == likedQuotesList[i]['quotes']){
+                                                    likedQuotesList.removeAt(i);
+                                                    likedQuotesImg.removeAt(i);
+                                                    favKeyList.removeAt(i);
+                                                  }
+                                                }
                                                 Fluttertoast.showToast(
                                                   msg: 'Remove From Favorites',
                                                   toastLength:
