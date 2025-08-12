@@ -430,6 +430,8 @@ class _HomePageState extends State<HomePage> {
                                                 likedQuotesImg.removeAt(i);
                                               }
                                             }
+                                            print(likedQuotesList.length);
+                                            print(likedQuotesImg.length);
                                             Fluttertoast.showToast(
                                               msg: 'Remove From Favorites',
                                               toastLength:

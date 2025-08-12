@@ -100,10 +100,7 @@ class _EditPageState extends State<EditPage> {
                       switch (item) {
                         case 0:
                           RenderRepaintBoundary boundary =
-                          keyList[editQuoteIndex]
-                              .currentContext!
-                              .findRenderObject()
-                          as RenderRepaintBoundary;
+                          keyList[editQuoteIndex].currentContext!.findRenderObject() as RenderRepaintBoundary;
                           ui.Image image = await boundary.toImage();
                           ByteData? byteData = await image.toByteData(
                               format: ui.ImageByteFormat.png);

@@ -307,7 +307,7 @@ class _FavoriteQuotesState extends State<FavoriteQuotes> {
                                                 }
                                               }
 
-                                              for(int i=0; i<randomLikeList.length; i++){
+                                              for(int i=0; i<randomHomeQuotes.length; i++){
                                                 if(likedQuotesList[index]['quotes'] == randomHomeQuotes[i]['quotes']){
                                                   randomLikeList[i] = false;
                                                 }
